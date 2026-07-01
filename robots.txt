@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nasd0408.github.io/nicolas-sira-portfolio/sitemap.xml
