@@ -39,6 +39,16 @@ const translations = {
     "architecture.interface": "Interface",
     "architecture.logic": "Systems",
     "architecture.data": "Data & delivery",
+    "skills.label": "Toolbox",
+    "skills.title": "Chosen for the job.<br><em>Proven in production.</em>",
+    "skills.body": "A working stack, not a trophy shelf—what I use to design, build, test and run real systems.",
+    "skills.languages": "Languages",
+    "skills.frontend": "Frontend & mobile",
+    "skills.backend": "Backend",
+    "skills.data": "Data & BI",
+    "skills.cloud": "Cloud & delivery",
+    "skills.quality": "Quality",
+    "skills.note": "Also at home in Odoo & SAINT ERP operations · SUSCERTE 2023 — computer forensics & cybersecurity fundamentals",
     "experience.label": "Experience log",
     "experience.title": "From keeping a company online<br><em>to building its next system.</em>",
     "experience.subtitle": "Engineering shaped by ownership, not narrow job descriptions.",
@@ -120,6 +130,16 @@ const translations = {
     "architecture.interface": "Interfaz",
     "architecture.logic": "Sistemas",
     "architecture.data": "Datos y despliegue",
+    "skills.label": "Caja de herramientas",
+    "skills.title": "Elegidas para el trabajo.<br><em>Probadas en producción.</em>",
+    "skills.body": "Un stack de trabajo, no una vitrina: lo que uso para diseñar, construir, probar y operar sistemas reales.",
+    "skills.languages": "Lenguajes",
+    "skills.frontend": "Frontend y móvil",
+    "skills.backend": "Backend",
+    "skills.data": "Datos y BI",
+    "skills.cloud": "Cloud y despliegue",
+    "skills.quality": "Calidad",
+    "skills.note": "También opero Odoo y SAINT ERP · SUSCERTE 2023 — fundamentos de informática forense y ciberseguridad",
     "experience.label": "Registro de experiencia",
     "experience.title": "De mantener una empresa operativa<br><em>a construir su próximo sistema.</em>",
     "experience.subtitle": "Ingeniería moldeada por responsabilidad, no por descripciones de cargo estrechas.",
@@ -201,15 +221,13 @@ function updateScrollEffects() {
   progress.style.transform = `scaleX(${maxScroll > 0 ? scrollTop / maxScroll : 0})`;
   header.classList.toggle("scrolled", scrollTop > 24);
 
-  if (window.innerWidth > 760 && horizontal) {
+  if (horizontal) {
     const rect = horizontal.getBoundingClientRect();
     const distance = horizontal.offsetHeight - window.innerHeight;
     const value = Math.max(0, Math.min(1, -rect.top / distance));
     const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
     track.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
     horizontalMeter.style.transform = `scaleX(${value})`;
-  } else if (track) {
-    track.style.transform = "";
   }
   framePending = false;
 }
@@ -272,8 +290,8 @@ if (finePointer && cursorOrb) {
   });
 
   const renderCursor = () => {
-    currentX += (targetX - currentX) * .2;
-    currentY += (targetY - currentY) * .2;
+    currentX += (targetX - currentX) * .45;
+    currentY += (targetY - currentY) * .45;
     cursorOrb.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
     requestAnimationFrame(renderCursor);
   };
