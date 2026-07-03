@@ -25,6 +25,10 @@
   <title>Nicolás Sira — Full-stack engineer</title>
   <link rel="canonical" href="https://nasd0408.github.io/nicolas-sira-portfolio/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js", "is-loading");</script>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   <script type="application/ld+json">
@@ -57,6 +61,24 @@
   </script>
 </head>
 <body>
+  <div class="site-loader" aria-hidden="true">
+    <div class="loader-grid"></div>
+    <div class="loader-meta">
+      <span>PORTFOLIO / 2026</span>
+      <span>NS — SYS.01</span>
+    </div>
+    <div class="loader-identity">
+      <img src="assets/ns-mark.svg" alt="">
+      <p>Nicolás Sira</p>
+      <span>Full-stack systems engineer</span>
+    </div>
+    <div class="loader-status">
+      <span>Initializing experience</span>
+      <div class="loader-track"><i></i></div>
+      <strong><span class="loader-count">00</span>%</strong>
+    </div>
+  </div>
+
   <a class="skip-link" href="#work">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -65,7 +87,7 @@
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Nicolás Sira — home">
-      <span class="brand-mark">NS</span>
+      <span class="brand-mark"><img src="assets/ns-mark.svg" alt=""></span>
       <span class="brand-status">
         <b>Nicolás Sira</b>
         <small data-i18n="nav.role">Full-stack engineer</small>
@@ -98,7 +120,7 @@
         <div class="orbit orbit-one"><span></span></div>
         <div class="orbit orbit-two"><span></span></div>
         <div class="orbit orbit-three"><span></span></div>
-        <div class="core"><span>NS</span></div>
+        <div class="core"><img src="assets/ns-mark.svg" alt=""></div>
         <div class="signal signal-one">API</div>
         <div class="signal signal-two">WEB</div>
         <div class="signal signal-three">MOBILE</div>
@@ -255,6 +277,40 @@
         </div>
         <a href="https://tortenerife.com/" target="_blank" rel="noreferrer"><span>01</span><strong>Tor Tenerife</strong><small>WordPress · tortenerife.com</small><b>↗</b></a>
         <a href="https://luxury-stroopwafel-506922.netlify.app/" target="_blank" rel="noreferrer"><span>02</span><strong data-i18n="web.editorialTitle">Editorial Portfolio</strong><small data-i18n="web.portfolio">Independent model portfolio</small><b>↗</b></a>
+      </div>
+    </section>
+
+    <section class="build-reveal" id="build-reveal" aria-labelledby="build-reveal-title">
+      <div class="build-reveal-sticky">
+        <div class="build-reveal-stage">
+          <div class="build-reveal-image">
+            <img src="assets/flotaiq-map.png" alt="FlotaIQ fleet map showing live routes across Venezuela" width="1918" height="872" loading="lazy" decoding="async">
+          </div>
+          <div class="build-reveal-scrim" aria-hidden="true"></div>
+          <div class="build-scaffold" aria-hidden="true">
+            <span class="scaffold-line line-v-one"></span>
+            <span class="scaffold-line line-v-two"></span>
+            <span class="scaffold-line line-h-one"></span>
+            <span class="scaffold-line line-h-two"></span>
+            <i class="scaffold-node node-one"></i>
+            <i class="scaffold-node node-two"></i>
+            <i class="scaffold-node node-three"></i>
+            <i class="scaffold-node node-four"></i>
+          </div>
+          <div class="build-reveal-copy">
+            <div class="build-reveal-kicker">
+              <span>LIVE SYSTEM / 01</span>
+              <span data-i18n="reveal.status">Built beyond the mockup</span>
+            </div>
+            <h2 id="build-reveal-title" data-i18n="reveal.title">From architecture<br><em>to motion.</em></h2>
+            <p data-i18n="reveal.body">Interfaces are only the surface. Underneath: routes, permissions, live signals and decisions moving together.</p>
+          </div>
+          <div class="build-reveal-readout" aria-hidden="true">
+            <span>FLOTAIQ / GEO SIGNAL</span>
+            <b><i></i></b>
+            <span class="reveal-percent">00%</span>
+          </div>
+        </div>
       </div>
     </section>
 

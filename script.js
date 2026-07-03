@@ -84,6 +84,9 @@ const translations = {
     "web.body": "Focused web experiences for businesses and people.",
     "web.editorialTitle": "Editorial Portfolio",
     "web.portfolio": "Independent model portfolio",
+    "reveal.status": "Built beyond the mockup",
+    "reveal.title": "From architecture<br><em>to motion.</em>",
+    "reveal.body": "Interfaces are only the surface. Underneath: routes, permissions, live signals and decisions moving together.",
     "contact.label": "Start a conversation",
     "contact.pre": "Have a system to build, a product to strengthen or a difficult problem worth solving?",
     "contact.line1": "Let’s make it",
@@ -175,6 +178,9 @@ const translations = {
     "web.body": "Experiencias web enfocadas para negocios y personas.",
     "web.editorialTitle": "Portafolio Editorial",
     "web.portfolio": "Portafolio independiente de modelo",
+    "reveal.status": "Construido más allá del mockup",
+    "reveal.title": "De la arquitectura<br><em>al movimiento.</em>",
+    "reveal.body": "La interfaz es solo la superficie. Debajo conviven rutas, permisos, señales en vivo y decisiones que se mueven juntas.",
     "contact.label": "Iniciemos una conversación",
     "contact.pre": "¿Tienes un sistema por construir, un producto por mejorar o un problema difícil que valga la pena resolver?",
     "contact.line1": "Hagamos que",
@@ -189,6 +195,42 @@ const langLabels = [...document.querySelectorAll("[data-lang]")];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const cursorOrb = document.querySelector(".cursor-orb");
+const loader = document.querySelector(".site-loader");
+const loaderCount = document.querySelector(".loader-count");
+
+if (loader) {
+  const loaderDuration = reducedMotion ? 120 : 1250;
+  const loaderStartedAt = Date.now();
+  let loaderReleased = false;
+
+  const releaseLoader = () => {
+    if (loaderReleased) return;
+    loaderReleased = true;
+    loader.style.setProperty("--loader-progress", "1");
+    loaderCount.textContent = "100";
+    loader.classList.add("is-leaving");
+    html.classList.remove("is-loading");
+    const hashTarget = window.location.hash && document.querySelector(window.location.hash);
+    if (hashTarget) window.requestAnimationFrame(() => hashTarget.scrollIntoView({ block: "start" }));
+    window.setTimeout(() => loader.remove(), reducedMotion ? 20 : 950);
+  };
+
+  const loaderTimer = window.setInterval(() => {
+    const elapsed = Math.min(1, (Date.now() - loaderStartedAt) / loaderDuration);
+    const eased = 1 - Math.pow(1 - elapsed, 3);
+    loader.style.setProperty("--loader-progress", eased.toFixed(4));
+    loaderCount.textContent = String(Math.round(eased * 100)).padStart(2, "0");
+
+    if (elapsed >= 1) {
+      window.clearInterval(loaderTimer);
+      window.setTimeout(releaseLoader, reducedMotion ? 0 : 120);
+    }
+  }, reducedMotion ? 20 : 25);
+
+  window.setTimeout(releaseLoader, loaderDuration + (reducedMotion ? 80 : 650));
+} else {
+  html.classList.remove("is-loading");
+}
 
 function setLanguage(lang) {
   const dictionary = translations[lang] || translations.en;
@@ -213,6 +255,8 @@ const progress = document.querySelector(".scroll-progress span");
 const horizontal = document.querySelector(".horizontal-sticky");
 const track = document.querySelector(".horizontal-track");
 const horizontalMeter = document.querySelector(".horizontal-meter span");
+const buildReveal = document.querySelector(".build-reveal");
+const revealPercent = document.querySelector(".reveal-percent");
 let framePending = false;
 
 function updateScrollEffects() {
@@ -228,6 +272,20 @@ function updateScrollEffects() {
     const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
     track.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
     horizontalMeter.style.transform = `scaleX(${value})`;
+  }
+
+  if (buildReveal) {
+    const rect = buildReveal.getBoundingClientRect();
+    const distance = Math.max(1, buildReveal.offsetHeight - window.innerHeight);
+    const raw = Math.max(0, Math.min(1, -rect.top / distance));
+    const value = reducedMotion ? 1 : raw * raw * (3 - 2 * raw);
+    buildReveal.style.setProperty("--reveal-x", `${42 * (1 - value)}%`);
+    buildReveal.style.setProperty("--reveal-y", `${38 * (1 - value)}%`);
+    buildReveal.style.setProperty("--reveal-scale", String(1.14 - value * .14));
+    buildReveal.style.setProperty("--scaffold-opacity", String(Math.max(0, 1 - value * 1.35)));
+    buildReveal.style.setProperty("--copy-y", `${48 * (1 - value)}px`);
+    buildReveal.style.setProperty("--reveal-progress", String(value));
+    revealPercent.textContent = `${String(Math.round(value * 100)).padStart(2, "0")}%`;
   }
   framePending = false;
 }
