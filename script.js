@@ -31,6 +31,21 @@ const translations = {
     "case.website": "Product website",
     "cuadre.downloads": "Play Store downloads",
     "cuadre.offline": "Works offline.<br>Syncs when connected.",
+    "game.label": "Game design & development",
+    "game.kicker": "A rhythm game built with Godot",
+    "game.body": "You are Norway's drum at the Rowing World Championship. Conduct the crowd or row the longship—everything is controlled by the swing.",
+    "game.modes": "Game modes",
+    "game.difficulties": "Difficulty levels",
+    "game.languages": "Tutorial languages",
+    "game.cta": "Play & download on itch.io",
+    "game.chapter": "Two modes. One pulse.",
+    "game.chapterTitle": "Conduct the stadium.<br><em>Row the longship.</em>",
+    "game.chapterBody": "No clicking and no long tutorials. Swing to command the crowd, then keep the boat moving in rhythm.",
+    "game.conduct": "DIRIGER! — Conduct the crowd",
+    "game.row": "RO! — Row to the beat",
+    "game.scroll": "Scroll to row",
+    "game.sound": "Play with sound",
+    "game.mute": "Mute sound",
     "architecture.label": "Under the interface",
     "architecture.title": "I care about what users see.<br><em>And everything they don't.</em>",
     "architecture.body": "Reliable software is a chain. Every layer needs to hold.",
@@ -125,6 +140,21 @@ const translations = {
     "case.website": "Web del producto",
     "cuadre.downloads": "descargas en Play Store",
     "cuadre.offline": "Funciona sin internet.<br>Sincroniza al conectarse.",
+    "game.label": "Diseño y desarrollo de videojuegos",
+    "game.kicker": "Un juego rítmico creado con Godot",
+    "game.body": "Eres el tambor de Noruega en el Campeonato Mundial de Remo. Dirige al público o impulsa el drakkar: todo se controla con el movimiento.",
+    "game.modes": "Modos de juego",
+    "game.difficulties": "Niveles de dificultad",
+    "game.languages": "Idiomas del tutorial",
+    "game.cta": "Jugar y descargar en itch.io",
+    "game.chapter": "Dos modos. Un solo pulso.",
+    "game.chapterTitle": "Dirige el estadio.<br><em>Rema con el drakkar.</em>",
+    "game.chapterBody": "Sin clics y sin tutoriales eternos. Muévete para dirigir al público y mantén el bote avanzando al ritmo del tambor.",
+    "game.conduct": "DIRIGER! — Dirige al público",
+    "game.row": "RO! — Rema al ritmo",
+    "game.scroll": "Desliza para remar",
+    "game.sound": "Escuchar el RÖ",
+    "game.mute": "Silenciar",
     "architecture.label": "Detrás de la interfaz",
     "architecture.title": "Me importa lo que el usuario ve.<br><em>Y todo lo que no ve.</em>",
     "architecture.body": "El software confiable es una cadena. Cada capa debe responder.",
@@ -255,9 +285,54 @@ const progress = document.querySelector(".scroll-progress span");
 const horizontal = document.querySelector(".horizontal-sticky");
 const track = document.querySelector(".horizontal-track");
 const horizontalMeter = document.querySelector(".horizontal-meter span");
+const roGame = document.querySelector(".ro-game");
+const roViewport = document.querySelector(".ro-viewport");
+const roTrack = document.querySelector(".ro-track");
+const roMeter = document.querySelector(".ro-scroll-readout b i");
+const roProgressCount = document.querySelector(".ro-progress-count");
+const roVideo = document.querySelector(".ro-game-video");
+const roSoundToggle = document.querySelector(".ro-sound-toggle");
+const roSoundLabel = roSoundToggle?.querySelector("strong");
 const buildReveal = document.querySelector(".build-reveal");
 const revealPercent = document.querySelector(".reveal-percent");
 let framePending = false;
+
+function syncRoSoundLabel() {
+  if (!roVideo || !roSoundLabel) return;
+  const key = roVideo.muted ? "game.sound" : "game.mute";
+  roSoundLabel.textContent = (translations[html.lang] || translations.en)[key];
+}
+
+if (roVideo && roSoundToggle) {
+  syncRoSoundLabel();
+  langButton.addEventListener("click", syncRoSoundLabel);
+
+  roSoundToggle.addEventListener("click", async () => {
+    const enableSound = roVideo.muted;
+    roVideo.muted = !enableSound;
+    roVideo.volume = .9;
+    roSoundToggle.classList.toggle("has-sound", enableSound);
+    roSoundToggle.setAttribute("aria-pressed", String(enableSound));
+    syncRoSoundLabel();
+
+    if (roVideo.paused) {
+      try {
+        await roVideo.play();
+      } catch {
+        roVideo.muted = true;
+        roSoundToggle.classList.remove("has-sound");
+        roSoundToggle.setAttribute("aria-pressed", "false");
+        syncRoSoundLabel();
+      }
+    }
+  });
+
+  const roVideoObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) roVideo.play().catch(() => {});
+    else roVideo.pause();
+  }, { threshold: .12 });
+  roVideoObserver.observe(roGame);
+}
 
 function updateScrollEffects() {
   const scrollTop = window.scrollY;
@@ -272,6 +347,21 @@ function updateScrollEffects() {
     const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
     track.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
     horizontalMeter.style.transform = `scaleX(${value})`;
+  }
+
+  if (roGame) {
+    const rect = roGame.getBoundingClientRect();
+    const distance = Math.max(1, roGame.offsetHeight - window.innerHeight);
+    const raw = Math.max(0, Math.min(1, -rect.top / distance));
+    const value = reducedMotion ? 1 : raw * raw * (3 - 2 * raw);
+    const maxTranslate = Math.max(0, roTrack.scrollWidth - roViewport.clientWidth);
+    roTrack.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
+    roGame.style.setProperty("--ro-overlay-x", `${-value * 14}vw`);
+    roGame.style.setProperty("--ro-overlay-y", `${(value - .5) * 72}px`);
+    roGame.style.setProperty("--ro-ring-rotation", `${value * 150}deg`);
+    roGame.style.setProperty("--ro-media-y", `${-18 + value * 24}px`);
+    roMeter.style.transform = `scaleX(${value})`;
+    roProgressCount.textContent = String(Math.min(5, Math.floor(value * 4.999) + 1)).padStart(2, "0");
   }
 
   if (buildReveal) {
