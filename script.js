@@ -106,6 +106,7 @@ const translations = {
     "contact.pre": "Have a system to build, a product to strengthen or a difficult problem worth solving?",
     "contact.line1": "Let’s make it",
     "contact.line2": "work beautifully.",
+    "contact.cv": "Download CV (PDF)",
     "contact.top": "Back to top"
   },
   es: {
@@ -215,6 +216,7 @@ const translations = {
     "contact.pre": "¿Tienes un sistema por construir, un producto por mejorar o un problema difícil que valga la pena resolver?",
     "contact.line1": "Hagamos que",
     "contact.line2": "funcione increíble.",
+    "contact.cv": "Descargar CV (PDF)",
     "contact.top": "Volver arriba"
   }
 };
@@ -269,6 +271,9 @@ function setLanguage(lang) {
     if (value) element.innerHTML = value;
   });
   html.lang = lang;
+  document.querySelectorAll("[data-cv-link]").forEach((link) => {
+    link.href = `assets/cv/Nicolas-Sira-CV-${lang === "es" ? "ES" : "EN"}.pdf`;
+  });
   langLabels.forEach((label) => label.classList.toggle("active", label.dataset.lang === lang));
   langButton.setAttribute("aria-pressed", String(lang === "es"));
   localStorage.setItem("nicolas-portfolio-language", lang);
