@@ -46,6 +46,23 @@ const translations = {
     "game.scroll": "Scroll to row",
     "game.sound": "Play with sound",
     "game.mute": "Mute sound",
+    "algo.label": "Algorithms & systems",
+    "algo.kicker": "Written entirely in Python. Running in the browser.",
+    "algo.title": "Algorithms you can hear.",
+    "algo.body": "Every comparison plays a note pitched by the value it touched: noise while the array is unsorted, a scale as it resolves. The second module does the same with route search over real OpenStreetMap cities.",
+    "algo.cta": "Open the visualizer",
+    "algo.sound": "Play with sound",
+    "algo.mute": "Mute sound",
+    "algo.sorters": "Sorting algorithms",
+    "algo.searchers": "Route algorithms",
+    "algo.maps": "Real city maps",
+    "algo.nojs": "Lines of JavaScript",
+    "algo.note1Title": "The engine is an event list, not an animation",
+    "algo.note1Body": "The algorithm runs to completion before the first frame is painted. Playback is a cursor moving over that list—so stepping backwards is O(1), and picture and sound stay in sync by construction.",
+    "algo.note2Title": "Sound is scheduled against the audio clock",
+    "algo.note2Body": "Notes are queued ahead on the AudioContext clock instead of on the animation frame: a few milliseconds of frame jitter are heard as arrhythmia. A pentatonic scale keeps twenty simultaneous notes consonant.",
+    "algo.note3Title": "The maps are baked, not downloaded",
+    "algo.note3Body": "A build step queries Overpass, prunes the degree-two nodes that carry no shape, and versions the result. Every edge weight is at least the straight line, which is what keeps the A* heuristic admissible.",
     "architecture.label": "Under the interface",
     "architecture.title": "I care about what users see.<br><em>And everything they don't.</em>",
     "architecture.body": "Reliable software is a chain. Every layer needs to hold.",
@@ -156,6 +173,23 @@ const translations = {
     "game.scroll": "Desliza para remar",
     "game.sound": "Escuchar el RÖ",
     "game.mute": "Silenciar",
+    "algo.label": "Algoritmos y sistemas",
+    "algo.kicker": "Escrito íntegramente en Python. Corriendo en el navegador.",
+    "algo.title": "Algoritmos que se escuchan.",
+    "algo.body": "Cada comparación emite una nota cuyo tono sale del valor que tocó: ruido mientras el array está desordenado, una escala a medida que se resuelve. El segundo módulo hace lo mismo con búsqueda de rutas sobre ciudades reales de OpenStreetMap.",
+    "algo.cta": "Abrir el visualizador",
+    "algo.sound": "Escuchar AlgoViz",
+    "algo.mute": "Silenciar",
+    "algo.sorters": "Algoritmos de ordenamiento",
+    "algo.searchers": "Algoritmos de rutas",
+    "algo.maps": "Mapas reales de ciudades",
+    "algo.nojs": "Líneas de JavaScript",
+    "algo.note1Title": "El motor es una lista de eventos, no una animación",
+    "algo.note1Body": "El algoritmo se ejecuta entero antes de pintar el primer fotograma. Reproducir es mover un cursor sobre esa lista: por eso retroceder es O(1), y la imagen y el sonido van sincronizados por construcción.",
+    "algo.note2Title": "El sonido se programa contra el reloj de audio",
+    "algo.note2Body": "Las notas se encolan con anticipación sobre el reloj del AudioContext y no en el fotograma: unos milisegundos de jitter se oyen como arritmia. La escala pentatónica mantiene consonantes veinte notas simultáneas.",
+    "algo.note3Title": "Los mapas se hornean, no se descargan",
+    "algo.note3Body": "Un paso de compilación consulta Overpass, poda los nodos de grado dos que no aportan forma y versiona el resultado. Cada arista pesa al menos lo que la línea recta, que es lo que mantiene admisible la heurística de A*.",
     "architecture.label": "Detrás de la interfaz",
     "architecture.title": "Me importa lo que el usuario ve.<br><em>Y todo lo que no ve.</em>",
     "architecture.body": "El software confiable es una cadena. Cada capa debe responder.",
@@ -449,6 +483,47 @@ if (finePointer && cursorOrb) {
     requestAnimationFrame(renderCursor);
   };
   renderCursor();
+}
+
+/* AlgoViz — the visualizer itself plays behind the copy. */
+const algoSection = document.querySelector(".algo");
+const algoVideo = document.querySelector(".algo-video");
+const algoSoundToggle = document.querySelector(".algo-sound");
+const algoSoundLabel = algoSoundToggle?.querySelector("strong");
+
+function syncAlgoSoundLabel() {
+  if (!algoVideo || !algoSoundLabel) return;
+  const key = algoVideo.muted ? "algo.sound" : "algo.mute";
+  algoSoundLabel.textContent = (translations[html.lang] || translations.en)[key];
+}
+
+if (algoSection && algoVideo && algoSoundToggle) {
+  syncAlgoSoundLabel();
+  langButton.addEventListener("click", syncAlgoSoundLabel);
+
+  algoSoundToggle.addEventListener("click", async () => {
+    const enableSound = algoVideo.muted;
+    algoVideo.muted = !enableSound;
+    algoVideo.volume = .9;
+    algoSoundToggle.setAttribute("aria-pressed", String(enableSound));
+    syncAlgoSoundLabel();
+
+    if (algoVideo.paused) {
+      try {
+        await algoVideo.play();
+      } catch {
+        algoVideo.muted = true;
+        algoSoundToggle.setAttribute("aria-pressed", "false");
+        syncAlgoSoundLabel();
+      }
+    }
+  });
+
+  const algoVideoObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) algoVideo.play().catch(() => {});
+    else algoVideo.pause();
+  }, { threshold: .12 });
+  algoVideoObserver.observe(algoSection);
 }
 
 document.getElementById("year").textContent = new Date().getFullYear();

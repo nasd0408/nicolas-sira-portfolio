@@ -29,7 +29,7 @@ A static, dependency-free single-page site — no framework, no build step. Just
 ├── favicon.svg
 ├── robots.txt
 ├── sitemap.xml
-├── assets/             # Product screenshots, logos and OG image
+├── assets/             # Screenshots, logos, background video and OG image
 └── .github/workflows/  # GitHub Pages deployment
 ```
 
@@ -55,6 +55,7 @@ Then visit `http://localhost:8000`.
 | English/Spanish copy and interactions  | `script.js`   |
 | Visual system and responsive layout    | `styles.css`  |
 | Product images                         | `assets/`     |
+| Section background videos              | `assets/`     |
 
 > The English/Spanish copy lives in the `translations` object in `script.js`, keyed by the `data-i18n` attributes in `index.html`. Update both sides when adding text.
 
