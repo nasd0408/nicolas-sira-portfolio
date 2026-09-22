@@ -143,7 +143,7 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
   const schedule=()=>{if(!frame)frame=requestAnimationFrame(update);};
   addEventListener('scroll',schedule,{passive:true});
   addEventListener('resize',schedule); motion.addEventListener('change',schedule); update();
-  document.querySelectorAll('.skill-group').forEach(card=>{
+  document.querySelectorAll('.skill-group, .case-copy, .timeline-item').forEach(card=>{
     card.addEventListener('pointermove',event=>{
       if(motion.matches||event.pointerType!=='mouse')return;
       const rect=card.getBoundingClientRect();
@@ -179,7 +179,7 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
     scene.addEventListener('pointerleave', reset);
     preference.addEventListener('change', reset);
   });
-  document.querySelectorAll('.circle-link, .contact-pill, .visual-lab-link').forEach(link => {
+  document.querySelectorAll('.circle-link, .contact-pill, .visual-lab-link, .desktop-nav a').forEach(link => {
     // Move the contents, not the hit target, so the link never escapes the pointer.
     const contents = [...link.children];
     const reset = () => contents.forEach(child => child.style.translate = '0px 0px');
@@ -199,4 +199,83 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
     entries.forEach(entry => entry.target.classList.toggle('motion-in-view', entry.isIntersecting));
   }, {threshold: .2});
   scenes.forEach(scene => observer.observe(scene));
+})();
+
+/* Impact numbers count up once their row is on screen; language toggles snap instead of re-animating. */
+(() => {
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  function animate(el) {
+    const target = parseInt(el.dataset.countTo, 10) || 0;
+    const duration = 1100;
+    const start = performance.now();
+    function frame(time) {
+      const progress = Math.min(1, (time - start) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(frame);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(frame);
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      animate(entry.target);
+      io.unobserve(entry.target);
+    });
+  }, { threshold: .6 });
+  function bind() {
+    document.querySelectorAll('.count-up').forEach(el => {
+      const row = el.closest('.impact-row');
+      if (motion.matches || (row && row.classList.contains('is-visible'))) {
+        el.textContent = el.dataset.countTo;
+      } else {
+        io.observe(el);
+      }
+    });
+  }
+  bind();
+  document.querySelector('.lang-toggle')?.addEventListener('click', bind);
+})();
+
+/* Hero tech tags decode into place once the loader clears, echoing the HUD styling of the orbit. */
+(() => {
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const rail = document.querySelector('.hero-rail');
+  const spans = rail ? [...rail.querySelectorAll('span')] : [];
+  if (!spans.length || motion.matches) return;
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&';
+  function scramble(span, delay) {
+    const final = span.textContent;
+    const duration = 480;
+    let startTime = null;
+    function frame(time) {
+      if (startTime === null) startTime = time + delay;
+      if (time < startTime) { requestAnimationFrame(frame); return; }
+      const progress = Math.min(1, (time - startTime) / duration);
+      const revealCount = Math.floor(progress * final.length);
+      let output = '';
+      for (let i = 0; i < final.length; i++) {
+        output += i < revealCount ? final[i] : chars[Math.floor(Math.random() * chars.length)];
+      }
+      span.textContent = output;
+      if (progress < 1) requestAnimationFrame(frame);
+      else span.textContent = final;
+    }
+    requestAnimationFrame(frame);
+  }
+  function run() {
+    spans.forEach((span, index) => scramble(span, index * 80));
+  }
+  if (!document.documentElement.classList.contains('is-loading')) {
+    run();
+  } else {
+    const loaderObserver = new MutationObserver(() => {
+      if (!document.documentElement.classList.contains('is-loading')) {
+        loaderObserver.disconnect();
+        run();
+      }
+    });
+    loaderObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  }
 })();
