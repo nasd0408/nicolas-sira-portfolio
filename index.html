@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080b10">
   <meta name="description" content="Nicolás Sira — full-stack engineer building operational software, multi-tenant products and reliable digital systems.">
-  <meta property="og:title" content="Nicolás Sira — Full-stack engineer">
+  <meta property="og:title" content="Nicolás Sira — Backend & Full-stack Developer">
   <meta property="og:description" content="I build software that runs the business.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nasd0408.github.io/nicolas-sira-portfolio/">
@@ -15,14 +15,14 @@
   <meta property="og:image" content="https://nasd0408.github.io/nicolas-sira-portfolio/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Nicolás Sira — Full-stack engineer. I build software that runs the business.">
+  <meta property="og:image:alt" content="Nicolás Sira — Backend & Full-stack Developer. I build software that runs the business.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nicolás Sira — Full-stack engineer">
+  <meta name="twitter:title" content="Nicolás Sira — Backend & Full-stack Developer">
   <meta name="twitter:description" content="I build software that runs the business.">
   <meta name="twitter:image" content="https://nasd0408.github.io/nicolas-sira-portfolio/assets/og-image.png">
   <meta name="author" content="Nicolás Sira">
   <meta name="robots" content="index, follow">
-  <title>Nicolás Sira — Full-stack engineer</title>
+  <title>Nicolás Sira — Backend & Full-stack Developer</title>
   <link rel="canonical" href="https://nasd0408.github.io/nicolas-sira-portfolio/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,13 +30,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("js", "is-loading");</script>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="enhancements.css?v=6">
+  <script src="script.js?v=5" defer></script>
+  <script src="enhancements.js?v=4" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Nicolás Sira",
-    "jobTitle": "Full-stack Engineer",
+    "jobTitle": "Backend and Full-stack Developer",
     "url": "https://nasd0408.github.io/nicolas-sira-portfolio/",
     "image": "https://nasd0408.github.io/nicolas-sira-portfolio/assets/og-image.png",
     "email": "nasd0408@gmail.com",
@@ -70,7 +72,7 @@
     <div class="loader-identity">
       <img src="assets/ns-mark.svg" alt="">
       <p>Nicolás Sira</p>
-      <span>Full-stack systems engineer</span>
+      <span>Backend &amp; full-stack developer</span>
     </div>
     <div class="loader-status">
       <span>Initializing experience</span>
@@ -90,7 +92,7 @@
       <span class="brand-mark"><img src="assets/ns-mark.svg" alt=""></span>
       <span class="brand-status">
         <b>Nicolás Sira</b>
-        <small data-i18n="nav.role">Full-stack engineer</small>
+        <small data-i18n="nav.role">Backend & full-stack developer</small>
       </span>
     </a>
 
@@ -135,14 +137,14 @@
         </div>
 
         <h1>
-          <span class="hero-kicker" data-i18n="hero.kicker">Full-stack engineer / Systems builder</span>
+          <span class="hero-kicker" data-i18n="hero.kicker">Backend & full-stack / C# · .NET · SQL</span>
           <span data-i18n="hero.line1">I build software</span>
           <span class="outline" data-i18n="hero.line2">that runs</span>
           <span data-i18n="hero.line3">the business.</span>
         </h1>
 
         <div class="hero-bottom">
-          <p data-i18n="hero.body">I turn operational complexity into calm, scalable products—from multi-tenant SaaS platforms to mobile apps used in the real world.</p>
+          <p data-i18n="hero.body">I turn operational complexity into useful products. Backend development with C#/.NET and SQL, with full-stack experience to take an idea all the way to production.</p>
           <a class="circle-link" href="#work" aria-label="Explore selected work">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
             <span data-i18n="hero.cta">Explore work</span>
@@ -204,11 +206,11 @@
               <div>
                 <div class="case-number">01</div>
                 <h3>Flota<span>IQ</span></h3>
-                <p data-i18n="flota.summary">A complete operations platform for transport companies—fleet, trips, maintenance, fuel, billing, documents, costs and live alerts in one system.</p>
+                <p data-i18n="flota.summary">A fleet platform with .NET and PostgreSQL: tenant isolation, trips, maintenance, fuel and billing. Real-time alerts with SignalR and a React interface.</p>
               </div>
               <div class="case-meta">
                 <div><small data-i18n="case.role">Role</small><strong data-i18n="case.solo">Solo product engineer</strong></div>
-                <div><small data-i18n="case.stack">Core stack</small><strong>React · .NET 10 · PostgreSQL</strong></div>
+                <div><small data-i18n="case.stack">Core stack</small><strong>.NET 10 · PostgreSQL · React</strong></div>
               </div>
               <div class="case-links">
                 <a href="https://flotaiq.duckdns.org/" target="_blank" rel="noreferrer">
@@ -221,10 +223,10 @@
             <div class="case-visual flota-visual">
               <div class="screen screen-main">
                 <div class="screen-bar"><i></i><i></i><i></i><span>flotaiq / dashboard</span></div>
-                <img src="assets/flotaiq-dashboard.png" alt="FlotaIQ main dashboard" width="1918" height="872" loading="lazy" decoding="async">
+                <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBQCdASowABYAPxF0rlKsJiOisBVaqYAiCWUnABR+AlNF7/TYz4H869Ok/clPOgkrkgAA/Hv/5qYEZah+6GAHcXCN7bBzyo+h/J7gcDpCeByphMao1Gf17mBZkLB40NKci+NzJq3dP/urecSEk0575qaE1Dne4Fc8AAAA)"><source type="image/webp" srcset="assets/optimized/flotaiq-dashboard-480.webp 480w, assets/optimized/flotaiq-dashboard-960.webp 960w, assets/optimized/flotaiq-dashboard-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1918" height="872" src="assets/flotaiq-dashboard.png" alt="FlotaIQ main dashboard" loading="lazy" decoding="async"></picture>
               </div>
               <div class="screen screen-float">
-                <img src="assets/flotaiq-map.png" alt="FlotaIQ fleet map" width="1918" height="875" loading="lazy" decoding="async">
+                <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBQCdASowABYAPxFwr1EsJiQisBVdUYAiCWMAxNguHm1kH64y9SXnCZa7Ui7t26++b/8gAP7sIi3z7kpfvw3TrfQxjs/gpi5EYEqwI79oJjuFzuePZgsJ+F88AP08LXpqSsi+nXgAK+sb5kicSxFZVs+I1PKwsEjO925i5dKNbparHuNyaAAA)"><source type="image/webp" srcset="assets/optimized/flotaiq-map-480.webp 480w, assets/optimized/flotaiq-map-960.webp 960w, assets/optimized/flotaiq-map-1600.webp 1600w" sizes="100vw"><img width="1918" height="875" src="assets/flotaiq-map.png" alt="FlotaIQ fleet map" loading="lazy" decoding="async"></picture>
               </div>
               <div class="tech-stamp stamp-one">REALTIME<br><b>SIGNALR</b></div>
               <div class="tech-stamp stamp-two">TENANT<br><b>ISOLATION</b></div>
@@ -234,17 +236,17 @@
           <article class="case case-cuadre panel">
             <div class="case-copy">
               <div class="case-topline">
-                <div class="cuadre-mini"><img src="assets/cuadre-logo.png" alt="CuadreAPP" width="1024" height="1024" loading="lazy" decoding="async"></div>
+                <div class="cuadre-mini"><picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRhABAABXRUJQVlA4IAQBAABQBwCdASowADAAPxGAtVYsJ6Sjo4wBgCIJZwAOcHYDKB4G6QJm1SM+58hOCrKF18sQtPbsST4er01xev6g6yFuioWgAP71CKYZBuHLryrqgaY0KWb86EBdhbZQWcezcJ/FBLDq9WqgzkFlCXMfEFHIUlLknO1+uAS9YrTBp0IMttjtoNC8PdBrp49g82JE5OqNCNTEYQdh7qj0Un1gKxJ75P6g/a+SuweAev+yHF/wm5u8HA8dBt97pDlyKn3qVfunNV95Wxc47hW1xQJg2gGnNhJu9tostq2H8RQ0dArX8R1JIy3uT/zn62XTRVR3+/s4ZkhMA597sTofY4ASV6ThVQAAAA==)"><source type="image/webp" srcset="assets/optimized/cuadre-logo-256.webp 256w" sizes="104px"><img width="1024" height="1024" src="assets/cuadre-logo.png" alt="CuadreAPP" loading="lazy" decoding="async"></picture></div>
                 <span data-i18n="cuadre.type">Business OS for beauty professionals</span>
               </div>
               <div>
                 <div class="case-number">02</div>
                 <h3>Cuadre<span>APP</span></h3>
-                <p data-i18n="cuadre.summary">A mobile-first platform for beauty businesses: appointments, clients, debt, payroll, services, reminders, reports and offline-first synchronization.</p>
+                <p data-i18n="cuadre.summary">A .NET backend for appointments, clients, debts, payroll and reporting. A React Native app with offline-first synchronization brings it to beauty professionals.</p>
               </div>
               <div class="case-meta">
                 <div><small data-i18n="case.role">Role</small><strong data-i18n="case.solo">Solo product engineer</strong></div>
-                <div><small data-i18n="case.stack">Core stack</small><strong>React Native · Expo · .NET 10</strong></div>
+                <div><small data-i18n="case.stack">Core stack</small><strong>.NET 10 · React Native · Expo</strong></div>
               </div>
               <div class="case-links">
                 <a href="https://cuadreapp.duckdns.org/" target="_blank" rel="noreferrer">
@@ -255,8 +257,8 @@
               </div>
             </div>
             <div class="case-visual cuadre-visual">
-              <div class="phone phone-one"><img src="assets/cuadre-dashboard.png" alt="CuadreAPP dashboard" width="1080" height="2424" loading="lazy" decoding="async"></div>
-              <div class="phone phone-two"><img src="assets/cuadre-calendar.png" alt="CuadreAPP calendar" width="1080" height="2424" loading="lazy" decoding="async"></div>
+              <div class="phone phone-one"><picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoVADAAPxF4tVQsJqSjKrgKAYAiCWQAAGA6jF/2riWzWqrrMP9JxLN/iZ50vT8AAP7zcBbAs+Ks4XfW/Up7TsR3Qi/8GKt32xbPQPriwij8U/IAsSCLQ6EKQue3evw9XiWZPCDJD/+dtXwCdnP4OX76yELISu50Ye7Wu3s64bBckJyXFc+TncOSue2WdQhFXKjl1igaFqX5AQZ/QEOh+QEWAemTfAgA)"><source type="image/webp" srcset="assets/optimized/cuadre-dashboard-480.webp 480w, assets/optimized/cuadre-dashboard-960.webp 960w, assets/optimized/cuadre-dashboard-1080.webp 1080w" sizes="(max-width: 760px) 45vw, 28vw"><img width="1080" height="2424" src="assets/cuadre-dashboard.png" alt="CuadreAPP dashboard" loading="lazy" decoding="async"></picture></div>
+              <div class="phone phone-two"><picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoVADAAPxGCs1asKCQjpWmZgCIJaQAAKXg/rZoRMAD+746nvTvtiT0RKQa46q+y0Ox755g189BSAFtonfP3fScXJXGgAA==)"><source type="image/webp" srcset="assets/optimized/cuadre-calendar-480.webp 480w, assets/optimized/cuadre-calendar-960.webp 960w, assets/optimized/cuadre-calendar-1080.webp 1080w" sizes="(max-width: 760px) 45vw, 28vw"><img width="1080" height="2424" src="assets/cuadre-calendar.png" alt="CuadreAPP calendar" loading="lazy" decoding="async"></picture></div>
               <div class="release-badge">
                 <span>100+</span>
                 <small data-i18n="cuadre.downloads">Play Store downloads</small>
@@ -269,89 +271,16 @@
       </div>
     </section>
 
-    <section class="ro-game" id="ro" aria-labelledby="ro-title">
-      <div class="ro-sticky">
-        <div class="ro-ribbon" aria-hidden="true">
-          <div class="ro-ribbon-track">
-            <span>RÖ ★ NORGE</span><span>TUM-TUM · RÖ!</span><span>GODOT 4.7</span><span>ROW TO THE BEAT</span>
-            <span>RÖ ★ NORGE</span><span>TUM-TUM · RÖ!</span><span>GODOT 4.7</span><span>ROW TO THE BEAT</span>
-          </div>
-        </div>
-
-        <div class="ro-parallax" aria-hidden="true">
-          <span class="ro-ghost">RÖ</span>
-          <i class="ro-ring ro-ring-one"></i>
-          <i class="ro-ring ro-ring-two"></i>
-          <b>SWING / ROW / ROAR</b>
-        </div>
-
-        <div class="ro-scroll-main">
-          <div class="ro-copy">
-            <div class="eyebrow ro-eyebrow">
-              <span>03</span>
-              <span data-i18n="game.label">Game design & development</span>
-            </div>
-            <p class="ro-kicker" data-i18n="game.kicker">A rhythm game built with Godot</p>
-            <h2 id="ro-title"><span>RÖ</span><em>Viking Row</em></h2>
-            <p class="ro-summary" data-i18n="game.body">You are Norway's drum at the Rowing World Championship. Conduct the crowd or row the longship—everything is controlled by the swing.</p>
-
-            <div class="ro-facts">
-              <div><strong>2</strong><span data-i18n="game.modes">Game modes</span></div>
-              <div><strong>3</strong><span data-i18n="game.difficulties">Difficulty levels</span></div>
-              <div><strong>6</strong><span data-i18n="game.languages">Tutorial languages</span></div>
-            </div>
-
-            <a class="ro-cta" href="https://nasd0408.itch.io/ro-viking-row" target="_blank" rel="noreferrer">
-              <span data-i18n="game.cta">Play & download on itch.io</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-            </a>
-          </div>
-
-          <div class="ro-viewport">
-            <div class="ro-track">
-              <div class="ro-frame ro-frame-cover ro-video-frame">
-                <video class="ro-game-video" poster="assets/ro-cover.png" muted loop playsinline preload="metadata" aria-label="RÖ: Viking Row gameplay">
-                  <source src="assets/ro-gameplay.mp4" type="video/mp4">
-                </video>
-                <span class="ro-frame-tag">GODOT 4.7 / WEB + WINDOWS</span>
-                <button class="ro-sound-toggle" type="button" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Z"/><path class="sound-wave" d="M17 9c1.4 1.7 1.4 4.3 0 6M19.5 6.5c3 3 3 8 0 11"/></svg>
-                  <strong data-i18n="game.sound">Play with sound</strong>
-                </button>
-                <a class="ro-frame-open" href="https://nasd0408.itch.io/ro-viking-row" target="_blank" rel="noreferrer" aria-label="Open RÖ: Viking Row on itch.io">ITCH.IO ↗</a>
-              </div>
-              <figure class="ro-frame">
-                <img src="assets/ro-conduct.png" alt="RÖ conductor mode with a packed stadium" width="1280" height="720" loading="lazy" decoding="async">
-                <figcaption><span>01</span><strong data-i18n="game.conduct">DIRIGER! — Conduct the crowd</strong></figcaption>
-              </figure>
-              <figure class="ro-frame">
-                <img src="assets/ro-row.png" alt="RÖ rowing mode with a Viking longship" width="1280" height="720" loading="lazy" decoding="async">
-                <figcaption><span>02</span><strong data-i18n="game.row">RO! — Row to the beat</strong></figcaption>
-              </figure>
-              <figure class="ro-frame">
-                <img src="assets/ro-menu.png" alt="RÖ game mode selection screen" width="1280" height="720" loading="lazy" decoding="async">
-                <figcaption><span>03</span><strong>MODE SELECT / RÖ</strong></figcaption>
-              </figure>
-              <figure class="ro-frame">
-                <img src="assets/ro-gameplay.png" alt="RÖ conductor gameplay on Ragnarök difficulty" width="1280" height="720" loading="lazy" decoding="async">
-                <figcaption><span>04</span><strong>RAGNARÖK / PERFECT SWING</strong></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <div class="ro-scroll-readout" aria-hidden="true">
-          <span data-i18n="game.scroll">Scroll to row</span>
-          <b><i></i></b>
-          <strong><span class="ro-progress-count">01</span> / 05</strong>
-        </div>
-      </div>
-    </section>
-
+    <div class="project-lab" id="lab" role="region" aria-labelledby="lab-title">
+      <header class="project-lab-heading section-pad">
+        <div class="eyebrow"><span>03</span><span data-i18n="lab.label">Creative engineering</span></div>
+        <h2 id="lab-title" data-i18n="lab.title">Algorithms, interfaces<br><em>and playable worlds.</em></h2>
+        <nav aria-label="Creative projects"><a href="#algoviz">01 / AlgoViz ↘</a><a href="#editorial">02 / Viktoria Becker ↘</a><a href="#ro">03 / RÖ ↘</a></nav>
+      </header>
     <section class="algo" id="algoviz" aria-labelledby="algo-title">
       <div class="algo-stage" aria-hidden="true">
-        <video class="algo-video" poster="assets/algoviz-poster.jpg" muted loop playsinline preload="metadata" width="1440" height="612">
-          <source src="assets/algoviz.mp4" type="video/mp4">
+        <video class="algo-video" poster="assets/optimized/algoviz-poster-960.webp" muted loop playsinline preload="none" data-deferred width="1440" height="612">
+          <source data-src="assets/algoviz.mp4" type="video/mp4">
         </video>
         <div class="algo-scrim"></div>
         <div class="algo-grid"></div>
@@ -360,7 +289,7 @@
       <div class="algo-inner">
         <div class="algo-head">
           <div class="eyebrow reveal algo-eyebrow">
-            <span>04</span>
+            <span>03.1</span>
             <span data-i18n="algo.label">Algorithms &amp; systems</span>
           </div>
           <p class="algo-kicker reveal" data-i18n="algo.kicker">Written entirely in Python. Running in the browser.</p>
@@ -406,48 +335,175 @@
         </article>
       </div>
     </section>
-
-    <section class="also-shipped">
-      <div class="web-work reveal">
-        <div class="web-work-title">
-          <span data-i18n="web.label">Also shipped</span>
-          <p data-i18n="web.body">Focused web experiences for businesses and people.</p>
+    <section class="visual-lab" id="editorial" aria-labelledby="visual-lab-title">
+      <div class="vika-stage section-pad">
+      <div class="eyebrow reveal"><span>03.2</span><span data-i18n="vika.label">Beyond the backend</span></div>
+      <div class="visual-lab-head">
+        <h2 id="visual-lab-title" class="reveal" data-i18n="vika.title">A different<br><em>kind of engineering.</em></h2>
+        <div class="visual-lab-copy reveal">
+          <p data-i18n="vika.body">Viktoria Becker — an editorial portfolio where photography, typography and motion share the stage. A side project to explore what an interface can feel like.</p>
+          <a class="visual-lab-link" href="https://berjaviks.netlify.app/" target="_blank" rel="noreferrer"><span data-i18n="vika.cta">Explore the website</span><span aria-hidden="true">↗</span></a>
         </div>
-        <a href="https://tortenerife.com/" target="_blank" rel="noreferrer"><span>01</span><strong>Tor Tenerife</strong><small>WordPress · tortenerife.com</small><b>↗</b></a>
-        <a href="https://berjaviks.netlify.app/" target="_blank" rel="noreferrer"><span>02</span><strong data-i18n="web.editorialTitle">Editorial Portfolio</strong><small data-i18n="web.portfolio">Independent model portfolio</small><b>↗</b></a>
+      </div>
+      <div class="gallery-toolbar">
+        <span data-i18n="vika.hint">Scroll to explore · drag to take control</span>
+        <div><button type="button" class="gallery-prev"><span aria-hidden="true">←</span><span class="sr-only" data-i18n="vika.previous">Previous preview</span></button><button type="button" class="gallery-next"><span aria-hidden="true">→</span><span class="sr-only" data-i18n="vika.next">Next preview</span></button></div>
+      </div>
+      <div class="vika-gallery" tabindex="0" aria-label="Viktoria Becker website previews">
+        <figure class="vika-preview">
+          <div class="preview-browser" aria-hidden="true"><i></i><i></i><i></i><span>berjaviks.netlify.app</span><b>01 / 03</b></div>
+          <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRggBAABXRUJQVlA4IPwAAADwBgCdASowAB4APxGAtFWsKCSjJWsxgCIJYwDKAYzvMp7/+Gi3ZZdbRhDQd5QFnFORulIEeMRqTe39+Xw1B7cAAP70IGcVRMWswvFXXcIq9uRF+HEMdZqSH3On4JFWWIsCctv/6yDtC2FoMVvNb0ug7DzYUZiiBkv4iD8O4zVNk9RGX94Z9PrYuDVmdnNX+0rHvRrqILN7NfZ4waDaylDHHpCfzP3Cy6bkhDebMSDfOAzvPRHpENdKGvOx5DNjdzsgg4XuECiHWa6mMFSA5ygqIrVOPrQ/mYtpsoNTpz7CBcpjdV93ZRG7FVqEBMiLzRvSLauvgtJluK4gAAA=)"><source type="image/webp" srcset="assets/optimized/vika-cover-480.webp 480w, assets/optimized/vika-cover-960.webp 960w, assets/optimized/vika-cover-1270.webp 1270w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1270" height="794" src="assets/vika-cover.webp" alt="Viktoria Becker website homepage with oversized typography and an editorial portrait" loading="lazy" decoding="async"></picture>
+          <figcaption><span data-i18n="vika.cover">The first impression</span><span>VIKTORIA BECKER / WEB</span></figcaption>
+        </figure>
+        <figure class="vika-preview">
+          <div class="preview-browser" aria-hidden="true"><i></i><i></i><i></i><span>berjaviks.netlify.app</span><b>02 / 03</b></div>
+          <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRhYBAABXRUJQVlA4IAoBAACwBgCdASowAB4APxF8sVKsJ6QiqqoBgCIJaADFyYxas3YVv/stTCCMRunLs15BjZeLhwAx+vfb4mjXxGUkAAD++oyhLg3jeg7V8Dru9Pt1IsT545obOfr41mwyfa5XcocctWbcDpWf5PKZDukYTbj3+rJzH5EZcqvbIPvhAciH+xVyKRmnxh0JazhbInXBggN4k2XzV60d8/3rq9Wh7K8J+bvn5254YbBXNrrRp7w/Zh2QJ9AhgncRdPHxbSBYLydhfjiXse5Lvtz7ssIkZbHya3tojTYRKmflWeC1U7cKXYsW0GCaKQC3c2pVyIHlgKIGHf7gq07a1qIGeKmhXFP2WljbNrilMAAAAA==)"><source type="image/webp" srcset="assets/optimized/vika-sequence-480.webp 480w, assets/optimized/vika-sequence-960.webp 960w, assets/optimized/vika-sequence-1270.webp 1270w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1270" height="794" src="assets/vika-sequence.webp" alt="Editorial composition from the Viktoria Becker website" loading="lazy" decoding="async"></picture>
+          <figcaption><span data-i18n="vika.sequence">The editorial sequence</span><span>VIKTORIA BECKER / WEB</span></figcaption>
+        </figure>
+        <figure class="vika-preview">
+          <div class="preview-browser" aria-hidden="true"><i></i><i></i><i></i><span>berjaviks.netlify.app</span><b>03 / 03</b></div>
+          <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQBACdASowAB4APxF0rVEsJqkisBVdUYAiCWkAzUgy44Eosdb4vK+DgI3BIYAA/u/SOrQkON+3NPTY1qsLp1tmYF7TEh9VsfjFIsfTJ+krYyzu0zDqaoygU/zUJFDhJVpuIQkhAAA=)"><source type="image/webp" srcset="assets/optimized/vika-motion-480.webp 480w, assets/optimized/vika-motion-960.webp 960w, assets/optimized/vika-motion-1270.webp 1270w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1270" height="794" src="assets/vika-motion.webp" alt="Kinetic chapter with expressive typography from the Viktoria Becker website" loading="lazy" decoding="async"></picture>
+          <figcaption><span data-i18n="vika.motion">Type in motion</span><span>VIKTORIA BECKER / WEB</span></figcaption>
+        </figure>
+      </div>
+      <div class="vika-progress" aria-hidden="true"><i></i><span>01 / 03</span></div>
       </div>
     </section>
+    <section class="ro-game" id="ro" aria-labelledby="ro-title">
+      <div class="ro-sticky">
+        <div class="ro-ribbon" aria-hidden="true">
+          <div class="ro-ribbon-track">
+            <span>RÖ ★ NORGE</span><span>TUM-TUM · RÖ!</span><span>GODOT 4.7</span><span>ROW TO THE BEAT</span>
+            <span>RÖ ★ NORGE</span><span>TUM-TUM · RÖ!</span><span>GODOT 4.7</span><span>ROW TO THE BEAT</span>
+          </div>
+        </div>
 
-    <section class="build-reveal" id="build-reveal" aria-labelledby="build-reveal-title">
-      <div class="build-reveal-sticky">
-        <div class="build-reveal-stage">
-          <div class="build-reveal-image">
-            <img src="assets/flotaiq-map.png" alt="FlotaIQ fleet map showing live routes across Venezuela" width="1918" height="872" loading="lazy" decoding="async">
-          </div>
-          <div class="build-reveal-scrim" aria-hidden="true"></div>
-          <div class="build-scaffold" aria-hidden="true">
-            <span class="scaffold-line line-v-one"></span>
-            <span class="scaffold-line line-v-two"></span>
-            <span class="scaffold-line line-h-one"></span>
-            <span class="scaffold-line line-h-two"></span>
-            <i class="scaffold-node node-one"></i>
-            <i class="scaffold-node node-two"></i>
-            <i class="scaffold-node node-three"></i>
-            <i class="scaffold-node node-four"></i>
-          </div>
-          <div class="build-reveal-copy">
-            <div class="build-reveal-kicker">
-              <span>LIVE SYSTEM / 01</span>
-              <span data-i18n="reveal.status">Built beyond the mockup</span>
+        <div class="ro-parallax" aria-hidden="true">
+          <span class="ro-ghost">RÖ</span>
+          <i class="ro-ring ro-ring-one"></i>
+          <i class="ro-ring ro-ring-two"></i>
+          <b>SWING / ROW / ROAR</b>
+        </div>
+
+        <div class="ro-scroll-main">
+          <div class="ro-copy">
+            <div class="eyebrow ro-eyebrow">
+              <span>03.3</span>
+              <span data-i18n="game.label">Game design & development</span>
             </div>
-            <h2 id="build-reveal-title" data-i18n="reveal.title">From architecture<br><em>to motion.</em></h2>
-            <p data-i18n="reveal.body">Interfaces are only the surface. Underneath: routes, permissions, live signals and decisions moving together.</p>
+            <p class="ro-kicker" data-i18n="game.kicker">A rhythm game built with Godot</p>
+            <h2 id="ro-title"><span>RÖ</span><em>Viking Row</em></h2>
+            <p class="ro-summary" data-i18n="game.body">You are Norway's drum at the Rowing World Championship. Conduct the crowd or row the longship—everything is controlled by the swing.</p>
+
+            <div class="ro-facts">
+              <div><strong>2</strong><span data-i18n="game.modes">Game modes</span></div>
+              <div><strong>3</strong><span data-i18n="game.difficulties">Difficulty levels</span></div>
+              <div><strong>6</strong><span data-i18n="game.languages">Tutorial languages</span></div>
+            </div>
+
+            <a class="ro-cta" href="https://nasd0408.itch.io/ro-viking-row" target="_blank" rel="noreferrer">
+              <span data-i18n="game.cta">Play & download on itch.io</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
           </div>
-          <div class="build-reveal-readout" aria-hidden="true">
-            <span>FLOTAIQ / GEO SIGNAL</span>
-            <b><i></i></b>
-            <span class="reveal-percent">00%</span>
+
+          <div class="ro-viewport">
+            <div class="ro-track">
+              <div class="ro-frame ro-frame-cover ro-video-frame">
+                <video class="ro-game-video" poster="assets/optimized/ro-cover-960.webp" muted loop playsinline preload="none" data-deferred aria-label="RÖ: Viking Row gameplay">
+                  <source data-src="assets/ro-gameplay.mp4" type="video/mp4">
+                </video>
+                <span class="ro-frame-tag">GODOT 4.7 / WEB + WINDOWS</span>
+                <button class="ro-sound-toggle" type="button" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Z"/><path class="sound-wave" d="M17 9c1.4 1.7 1.4 4.3 0 6M19.5 6.5c3 3 3 8 0 11"/></svg>
+                  <strong data-i18n="game.sound">Play with sound</strong>
+                </button>
+                <a class="ro-frame-open" href="https://nasd0408.itch.io/ro-viking-row" target="_blank" rel="noreferrer" aria-label="Open RÖ: Viking Row on itch.io">ITCH.IO ↗</a>
+              </div>
+              <figure class="ro-frame">
+                <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRjgBAABXRUJQVlA4ICwBAADQBgCdASowABsAPwlqsFArpaSisAqpcCEJZgDDdAolvYYDsCnaaD/GCsAfYu0YOk8KTaYwwxi9HZ9Xme5lOQAA/tqKdCxIfqBM/CRDLTZy4lp2exAlFSMx/l2kAZPc+qzooOnZ53L5C1A3wgakITZqJwWLqOr6FHwQOQh9g/9SljfyT/5bmnzobUi4B4me7YlzhlsUNE6hR18zmFimbroXpvjruZw+d/xyeZFUehyAdfEqzMXQsMPOCAiyP1iYLmLZLIiCGfrbMOHh+pEu9Sl72u7j/g6PybrjP8HJio/3s6Vrt7qdCpKAdlnLAZ3rfr2pr27USS6Ews30JAxf1WxVDljYyWJbe0Ph1a3KGIzy1GDw92FZt1/nYBnPcB7aAu2N4m3l40SHvsUqrAA=)"><source type="image/webp" srcset="assets/optimized/ro-conduct-480.webp 480w, assets/optimized/ro-conduct-960.webp 960w, assets/optimized/ro-conduct-1282.webp 1282w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1282" height="723" src="assets/ro-conduct.png" alt="RÖ conductor mode with a packed stadium" loading="lazy" decoding="async"></picture>
+                <figcaption><span>01</span><strong data-i18n="game.conduct">DIRIGER! — Conduct the crowd</strong></figcaption>
+              </figure>
+              <figure class="ro-frame">
+                <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAAAwBgCdASowABsAPxF8tFQsJ6SjJWzJgCIJbADCs2J2SHyOQ9LCjAt+fcEqaaqNRIzJJveuFvP6LhVgAP7aS/jcIujJz4Muge7qgowbxouar3YY/jeUdp/zDrU7nRo+svn1zYJ8CyVRxYBuBv7Gcw6LQusIIIzGejoMSW2u5haNJoV0l3vxJR8o4fJBV2O2WiIGfhQMLX5ppx3g+ggXqzJ24o26J/uLlvcXis3S5w7uuYCX8o3bIqvaq4wSBT08EUk6XMVmly63CHOniwe52MLYK1jcYOAAAAA=)"><source type="image/webp" srcset="assets/optimized/ro-row-480.webp 480w, assets/optimized/ro-row-960.webp 960w, assets/optimized/ro-row-1281.webp 1281w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1281" height="722" src="assets/ro-row.png" alt="RÖ rowing mode with a Viking longship" loading="lazy" decoding="async"></picture>
+                <figcaption><span>02</span><strong data-i18n="game.row">RO! — Row to the beat</strong></figcaption>
+              </figure>
+              <figure class="ro-frame">
+                <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAACQBgCdASowABsAPxGCvFWsKKYjJWmZgCIJbACdMu0FcHLaVgcxRESKAsMewoZq7Dis4kn5x1xw/YfjkZkAAP7y6dNyQ7uDP+fAOmsKVTu5/C8i4fVBcXzGtrLt0xwYjZAYNs6M2XcdkQ3LY3qeKzeOTDT1xoSPXc3TCkxexpDbTMBLNX/fWwDg+1+mUueyouk8DtU+TGYQV90A56bN0BhbmOQeClBwSm+9qGXc0GD3VC8a8vXv2i7FvSMEEmFXnBh66OSZyMb3DsazPULtxHKkYIJOBdHnKhJWQKQUGK697j0FZmYRhSvxurV472GIdaCUhmqorgA=)"><source type="image/webp" srcset="assets/optimized/ro-menu-480.webp 480w, assets/optimized/ro-menu-960.webp 960w, assets/optimized/ro-menu-1282.webp 1282w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1282" height="722" src="assets/ro-menu.png" alt="RÖ game mode selection screen" loading="lazy" decoding="async"></picture>
+                <figcaption><span>03</span><strong>MODE SELECT / RÖ</strong></figcaption>
+              </figure>
+              <figure class="ro-frame">
+                <picture class="progressive-media" style="--preview: url(data:image/webp;base64,UklGRiYBAABXRUJQVlA4IBoBAADQBgCdASowABsAPxF2slGsJySisBVaqYAiCWoAxQuFBmcmf6ge+qXgLB/zBR0birR1B2liamxT6qUWOmMGjIAA/unww73rP9nVSycWgEXT+W5uJagHO8bT0FjjhVaIycsygtJDQxdJRSkLm99vakMKq/C7b44UaYJ1bn46ZX0pTR9TBv/Bmtw0BSCl9EBwR1V+jBlZSddb4yG5lLxHWab2CGEnKW5fd5oAlQWZW7ErYkuf4WVvZ24T/5unHLoiioYP0AcOVH6Bi4285UCeghd1R00/MjrwRWluVf832W/Lsv5GLdJ+JS6GRN1qaSjeNnB+ezdVT1X/PpxkZtUgDIDwcHEcwNHiaZACubF9zWBBtrf54g426Os6QAA=)"><source type="image/webp" srcset="assets/optimized/ro-gameplay-480.webp 480w, assets/optimized/ro-gameplay-960.webp 960w, assets/optimized/ro-gameplay-1292.webp 1292w" sizes="(max-width: 760px) 100vw, 80vw"><img width="1292" height="720" src="assets/ro-gameplay.png" alt="RÖ conductor gameplay on Ragnarök difficulty" loading="lazy" decoding="async"></picture>
+                <figcaption><span>04</span><strong>RAGNARÖK / PERFECT SWING</strong></figcaption>
+              </figure>
+            </div>
           </div>
+        </div>
+
+        <div class="ro-scroll-readout" aria-hidden="true">
+          <span data-i18n="game.scroll">Scroll to row</span>
+          <b><i></i></b>
+          <strong><span class="ro-progress-count">01</span> / 05</strong>
+        </div>
+      </div>
+    </section>
+    </div>
+
+<section class="experience section-pad" id="experience">
+      <div class="eyebrow reveal">
+        <span>04</span>
+        <span data-i18n="experience.label">Experience log</span>
+      </div>
+      <div class="experience-layout">
+        <div class="experience-title reveal">
+          <h2 data-i18n="experience.title">From keeping a company online<br><em>to building its next system.</em></h2>
+          <p data-i18n="experience.subtitle">Engineering shaped by ownership, not narrow job descriptions.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date"><span data-i18n="experience.present">Present</span><small>07.2025 — NOW</small></div>
+            <div class="timeline-role">
+              <div>
+                <h3 data-i18n="agile.role">Full-stack Developer</h3>
+                <p>Agile Check · <span data-i18n="remote">Remote</span></p>
+              </div>
+              <span class="timeline-index">01</span>
+            </div>
+            <div class="timeline-detail">
+              <p data-i18n="agile.body">Building compliance software across C#/.NET, Angular and SQL Server; deploying multi-client environments in IIS and supporting on-premise installations for financial institutions.</p>
+              <div><span>C#</span><span>Angular</span><span>SQL Server</span><span>IIS</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date"><span>2025—2026</span><small>07.2025 — 05.2026</small></div>
+            <div class="timeline-role">
+              <div>
+                <h3 data-i18n="chicks.role">QA Automation Engineer</h3>
+                <p>ChicksGroup · <span data-i18n="remote">Remote</span>, Canada</p>
+              </div>
+              <span class="timeline-index">02</span>
+            </div>
+            <div class="timeline-detail">
+              <p data-i18n="chicks.body">Designed Cypress end-to-end suites for critical user journeys, catching failures earlier and reducing production risk.</p>
+              <div><span>Cypress</span><span>E2E</span><span>QA</span><span>CI</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date"><span>2023—2025</span><small>10.2023 — 06.2025</small></div>
+            <div class="timeline-role">
+              <div>
+                <h3 data-i18n="cauchos.role">Head of IT</h3>
+                <p>Grupo Super Cauchos · Venezuela</p>
+              </div>
+              <span class="timeline-index">03</span>
+            </div>
+            <div class="timeline-detail">
+              <p data-i18n="cauchos.body">Owned IT for a 30-person company: business intelligence, internal tools, ERP continuity and vendor operations. Power BI dashboards contributed to 14% month-over-month sales growth across roughly $500K in monthly flow.</p>
+              <div><span>Power BI</span><span>Odoo</span><span>SAINT</span><span>IT Ops</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -528,70 +584,11 @@
       <p class="skills-note reveal" data-i18n="skills.note">Also at home in Odoo & SAINT ERP operations · SUSCERTE 2023 — computer forensics & cybersecurity fundamentals</p>
     </section>
 
-    <section class="experience section-pad" id="experience">
-      <div class="eyebrow reveal">
-        <span>07</span>
-        <span data-i18n="experience.label">Experience log</span>
-      </div>
-      <div class="experience-layout">
-        <div class="experience-title reveal">
-          <h2 data-i18n="experience.title">From keeping a company online<br><em>to building its next system.</em></h2>
-          <p data-i18n="experience.subtitle">Engineering shaped by ownership, not narrow job descriptions.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span data-i18n="experience.present">Present</span><small>07.2025 — NOW</small></div>
-            <div class="timeline-role">
-              <div>
-                <h3 data-i18n="agile.role">Full-stack Developer</h3>
-                <p>Agile Check · <span data-i18n="remote">Remote</span></p>
-              </div>
-              <span class="timeline-index">01</span>
-            </div>
-            <div class="timeline-detail">
-              <p data-i18n="agile.body">Building compliance software across C#/.NET, Angular and SQL Server; deploying multi-client environments in IIS and supporting on-premise installations for financial institutions.</p>
-              <div><span>C#</span><span>Angular</span><span>SQL Server</span><span>IIS</span></div>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span>2025—2026</span><small>07.2025 — 05.2026</small></div>
-            <div class="timeline-role">
-              <div>
-                <h3 data-i18n="chicks.role">QA Automation Engineer</h3>
-                <p>ChicksGroup · <span data-i18n="remote">Remote</span>, Canada</p>
-              </div>
-              <span class="timeline-index">02</span>
-            </div>
-            <div class="timeline-detail">
-              <p data-i18n="chicks.body">Designed Cypress end-to-end suites for critical user journeys, catching failures earlier and reducing production risk.</p>
-              <div><span>Cypress</span><span>E2E</span><span>QA</span><span>CI</span></div>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span>2023—2025</span><small>10.2023 — 06.2025</small></div>
-            <div class="timeline-role">
-              <div>
-                <h3 data-i18n="cauchos.role">Head of IT</h3>
-                <p>Grupo Super Cauchos · Venezuela</p>
-              </div>
-              <span class="timeline-index">03</span>
-            </div>
-            <div class="timeline-detail">
-              <p data-i18n="cauchos.body">Owned IT for a 30-person company: business intelligence, internal tools, ERP continuity and vendor operations. Power BI dashboards contributed to 14% month-over-month sales growth across roughly $500K in monthly flow.</p>
-              <div><span>Power BI</span><span>Odoo</span><span>SAINT</span><span>IT Ops</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="impact section-pad">
       <div class="impact-head">
         <div>
           <div class="eyebrow reveal">
-            <span>08</span>
+            <span>07</span>
             <span data-i18n="impact.label">Evidence of impact</span>
           </div>
           <h2 class="reveal" data-i18n="impact.title">Good work should leave<br><em>a visible signal.</em></h2>
@@ -621,9 +618,14 @@
       </div>
     </section>
 
+
+
+
+
+
     <section class="about section-pad" id="about">
       <div class="eyebrow reveal">
-        <span>09</span>
+        <span>08</span>
         <span data-i18n="about.label">About the engineer</span>
       </div>
       <div class="about-layout">
@@ -636,7 +638,7 @@
           </div>
         </div>
         <div class="about-copy reveal">
-          <p class="lead" data-i18n="about.lead">I’m an Informatics Engineer who is happiest at the intersection of code and operations: understanding how a business really works, then making that work simpler.</p>
+          <p class="lead" data-i18n="about.lead">I’m an Informatics Engineer focused on backend development with C#/.NET and SQL. I enjoy understanding how a business really works, then building the systems that make it simpler.</p>
           <p data-i18n="about.body">My path through IT leadership, data analysis, QA automation and full-stack development gave me a useful bias: I think beyond the ticket. I care whether the whole system works for the people depending on it.</p>
           <div class="about-facts">
             <div><small data-i18n="about.education">Education</small><strong data-i18n="about.degree">Informatics Engineering · Universidad Centroccidental Lisandro Alvarado, 2024</strong></div>
@@ -653,7 +655,7 @@
       <div class="contact-grid" aria-hidden="true"></div>
       <div class="contact-top">
         <div class="eyebrow">
-          <span>10</span>
+          <span>09</span>
           <span data-i18n="contact.label">Start a conversation</span>
         </div>
         <span class="contact-location">PUERTO DE LA CRUZ · TENERIFE · GMT+1</span>

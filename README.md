@@ -1,6 +1,6 @@
 # Nicolás Sira — Portfolio
 
-Personal portfolio of **Nicolás Sira**, full-stack engineer building operational software, multi-tenant products and reliable digital systems.
+Personal portfolio of **Nicolás Sira**, backend developer focused on C#/.NET, SQL Server and PostgreSQL, with full-stack experience building financial software and multi-tenant products.
 
 **Live:** https://nasd0408.github.io/nicolas-sira-portfolio/
 
@@ -9,8 +9,11 @@ A static, dependency-free single-page site — no framework, no build step. Just
 ## Highlights
 
 - **Bilingual** — English / Spanish toggle with `localStorage` persistence and browser-language detection.
-- **Motion, done right** — scroll-driven horizontal case studies, an animated hero orbit, reveal-on-scroll, and a custom cursor. All gated behind `prefers-reduced-motion`.
-- **Zero dependencies** — everything runs from three files; deploy the folder as-is.
+- **Original visual identity** — the original palette, typography, hero orbits and project layouts, with a supplementary gallery of the Viktoria Becker website.
+- **Progressive images** — embedded low-resolution previews and responsive WebP images that fade in after decoding.
+- **Motion** — scroll-driven horizontal sequences including Vika, mouse dragging, keyboard/touch controls, a progressive architecture diagram, a drawn experience timeline and interactive skill lighting. Reduced-motion and short-screen fallbacks keep content accessible. Scrolling itself stays native.
+- **Deferred video** — distant videos are not fetched; data-saving and slow-connection hints disable automatic loading/playback until the user requests it.
+- **No build dependencies** — deploy the folder as-is. Typography uses Google Fonts with local font fallbacks.
 - **SEO-ready** — Open Graph + Twitter cards, `Person` JSON-LD structured data, `sitemap.xml` and `robots.txt`.
 - **Accessible** — skip link, semantic landmarks, `aria` states and keyboard focus styles.
 
@@ -24,6 +27,8 @@ A static, dependency-free single-page site — no framework, no build step. Just
 .
 ├── index.html          # Content, structure and meta/SEO
 ├── styles.css          # Visual system and responsive layout
+├── enhancements.css    # Progressive images, gallery and motion fallbacks
+├── enhancements.js     # Image decode transitions and accessible gallery controls
 ├── script.js           # i18n dictionary + interactions
 ├── 404.html            # Branded not-found page
 ├── favicon.svg
@@ -53,7 +58,7 @@ Then visit `http://localhost:8000`.
 | -------------------------------------- | ------------- |
 | Content and links                      | `index.html`  |
 | English/Spanish copy and interactions  | `script.js`   |
-| Visual system and responsive layout    | `styles.css`  |
+| Visual system and responsive layout    | `styles.css`, `enhancements.css` |
 | Product images                         | `assets/`     |
 | Section background videos              | `assets/`     |
 

@@ -1,16 +1,29 @@
 const translations = {
   en: {
-    "nav.role": "Full-stack engineer",
+    "lab.label": "Creative engineering",
+    "lab.title": "Algorithms, interfaces<br><em>and playable worlds.</em>",
+    "vika.label": "Beyond the backend",
+    "vika.title": "A different<br><em>kind of engineering.</em>",
+    "vika.body": "Viktoria Becker — an editorial portfolio where photography, typography and motion share the stage. A side project to explore what an interface can feel like.",
+    "vika.cta": "Explore the website",
+    "vika.hint": "Scroll to explore · drag to take control",
+    "vika.cover": "The first impression",
+    "vika.sequence": "The editorial sequence",
+    "vika.motion": "Type in motion",
+    "vika.previous": "Previous preview",
+    "vika.next": "Next preview",
+
+    "nav.role": "Backend & full-stack developer",
     "nav.work": "Work",
     "nav.experience": "Experience",
     "nav.about": "About",
     "nav.contact": "Let's talk",
     "hero.availability": "Open to remote work & relocation",
-    "hero.kicker": "Full-stack engineer / Systems builder",
+    "hero.kicker": "Backend & full-stack / C# · .NET · SQL",
     "hero.line1": "I build software",
     "hero.line2": "that runs",
     "hero.line3": "the business.",
-    "hero.body": "I turn operational complexity into calm, scalable products—from multi-tenant SaaS platforms to mobile apps used in the real world.",
+    "hero.body": "I turn operational complexity into useful products. Backend development with C#/.NET and SQL, with full-stack experience to take an idea all the way to production.",
     "hero.cta": "Explore work",
     "manifesto.label": "How I work",
     "manifesto.title": "Not just interfaces.<br><em>Operational leverage.</em>",
@@ -20,9 +33,9 @@ const translations = {
     "work.drag": "Scroll to explore",
     "work.title": "Built end to end.<br><em>Running for real.</em>",
     "flota.type": "Multi-tenant fleet intelligence",
-    "flota.summary": "A complete operations platform for transport companies—fleet, trips, maintenance, fuel, billing, documents, costs and live alerts in one system.",
+    "flota.summary": "A fleet platform with .NET and PostgreSQL: tenant isolation, trips, maintenance, fuel and billing. Real-time alerts with SignalR and a React interface.",
     "cuadre.type": "Business OS for beauty professionals",
-    "cuadre.summary": "A mobile-first platform for beauty businesses: appointments, clients, debt, payroll, services, reminders, reports and offline-first synchronization.",
+    "cuadre.summary": "A .NET backend for appointments, clients, debts, payroll and reporting. A React Native app with offline-first synchronization brings it to beauty professionals.",
     "case.role": "Role",
     "case.solo": "Solo product engineer",
     "case.stack": "Core stack",
@@ -103,7 +116,7 @@ const translations = {
     "impact.downloads": "My first public mobile product crossed <strong>100 Play Store downloads.</strong>",
     "about.label": "About the engineer",
     "about.title": "Born in Venezuela.<br>Based in Tenerife.<br><em>Built for anywhere.</em>",
-    "about.lead": "I’m an Informatics Engineer who is happiest at the intersection of code and operations: understanding how a business really works, then making that work simpler.",
+    "about.lead": "I’m an Informatics Engineer focused on backend development with C#/.NET and SQL. I enjoy understanding how a business really works, then building the systems that make it simpler.",
     "about.body": "My path through IT leadership, data analysis, QA automation and full-stack development gave me a useful bias: I think beyond the ticket. I care whether the whole system works for the people depending on it.",
     "about.education": "Education",
     "about.degree": "Informatics Engineering · Universidad Centroccidental Lisandro Alvarado, 2024",
@@ -112,13 +125,8 @@ const translations = {
     "about.location": "Location",
     "about.mobility": "Mobility",
     "about.mobilityValue": "Remote · Open to relocation",
-    "web.label": "Also shipped",
-    "web.body": "Focused web experiences for businesses and people.",
     "web.editorialTitle": "Editorial Portfolio",
     "web.portfolio": "Independent model portfolio",
-    "reveal.status": "Built beyond the mockup",
-    "reveal.title": "From architecture<br><em>to motion.</em>",
-    "reveal.body": "Interfaces are only the surface. Underneath: routes, permissions, live signals and decisions moving together.",
     "contact.label": "Start a conversation",
     "contact.pre": "Have a system to build, a product to strengthen or a difficult problem worth solving?",
     "contact.line1": "Let’s make it",
@@ -127,17 +135,30 @@ const translations = {
     "contact.top": "Back to top"
   },
   es: {
-    "nav.role": "Desarrollador full-stack",
+    "lab.label": "Ingeniería creativa",
+    "lab.title": "Algoritmos, interfaces<br><em>y mundos jugables.</em>",
+    "vika.label": "Más allá del backend",
+    "vika.title": "Otra forma<br><em>de construir.</em>",
+    "vika.body": "Viktoria Becker: un portafolio editorial donde fotografía, tipografía y movimiento comparten escenario. Un proyecto para explorar lo que una interfaz puede transmitir.",
+    "vika.cta": "Explorar la web",
+    "vika.hint": "Baja para explorar · arrastra para tomar el control",
+    "vika.cover": "La primera impresión",
+    "vika.sequence": "La secuencia editorial",
+    "vika.motion": "Tipografía en movimiento",
+    "vika.previous": "Vista anterior",
+    "vika.next": "Siguiente vista",
+
+    "nav.role": "Desarrollador backend y full-stack",
     "nav.work": "Proyectos",
     "nav.experience": "Experiencia",
     "nav.about": "Perfil",
     "nav.contact": "Hablemos",
     "hero.availability": "Disponible para trabajo remoto y reubicación",
-    "hero.kicker": "Ingeniero full-stack / Constructor de sistemas",
+    "hero.kicker": "Backend y full-stack / C# · .NET · SQL",
     "hero.line1": "Creo software",
     "hero.line2": "que mueve",
     "hero.line3": "el negocio.",
-    "hero.body": "Convierto complejidad operativa en productos claros y escalables: desde plataformas SaaS multi-tenant hasta aplicaciones móviles usadas en el mundo real.",
+    "hero.body": "Convierto complejidad operativa en productos útiles. Desarrollo backend con C#/.NET y SQL, con experiencia full-stack para llevar una idea hasta producción.",
     "hero.cta": "Ver proyectos",
     "manifesto.label": "Cómo trabajo",
     "manifesto.title": "No solo interfaces.<br><em>Ventaja operativa.</em>",
@@ -147,9 +168,9 @@ const translations = {
     "work.drag": "Desliza para explorar",
     "work.title": "Creados de punta a punta.<br><em>Funcionando de verdad.</em>",
     "flota.type": "Inteligencia de flotas multi-tenant",
-    "flota.summary": "Una plataforma operativa completa para transportistas: flota, viajes, mantenimiento, combustible, facturación, documentos, costos y alertas en vivo.",
+    "flota.summary": "Plataforma de flotas con .NET y PostgreSQL: aislamiento por cliente, viajes, mantenimiento, combustible y facturación. Alertas en tiempo real con SignalR e interfaz React.",
     "cuadre.type": "Sistema operativo para profesionales de belleza",
-    "cuadre.summary": "Una plataforma mobile-first para negocios de belleza: citas, clientes, deudas, nómina, servicios, recordatorios, reportes y sincronización offline-first.",
+    "cuadre.summary": "Backend .NET para citas, clientes, deudas, nómina y reportes. Una aplicación React Native con sincronización offline-first lo acerca a los profesionales de belleza.",
     "case.role": "Rol",
     "case.solo": "Ingeniero de producto independiente",
     "case.stack": "Stack principal",
@@ -230,7 +251,7 @@ const translations = {
     "impact.downloads": "Mi primer producto móvil público superó las <strong>100 descargas en Play Store.</strong>",
     "about.label": "Sobre el ingeniero",
     "about.title": "Nacido en Venezuela.<br>En Tenerife.<br><em>Listo para cualquier lugar.</em>",
-    "about.lead": "Soy Ingeniero en Informática y disfruto trabajar donde se cruzan el código y las operaciones: entender cómo funciona realmente un negocio y luego hacerlo más simple.",
+    "about.lead": "Soy Ingeniero en Informática enfocado en backend con C#/.NET y SQL. Disfruto entender cómo funciona un negocio y construir los sistemas que lo hacen más simple.",
     "about.body": "Mi recorrido por liderazgo de TI, análisis de datos, automatización QA y desarrollo full-stack me dejó un sesgo útil: pienso más allá del ticket. Me importa que el sistema completo funcione para las personas que dependen de él.",
     "about.education": "Formación",
     "about.degree": "Ingeniería en Informática · Universidad Centroccidental Lisandro Alvarado, 2024",
@@ -239,13 +260,8 @@ const translations = {
     "about.location": "Ubicación",
     "about.mobility": "Movilidad",
     "about.mobilityValue": "Remoto · Abierto a reubicación",
-    "web.label": "También publicados",
-    "web.body": "Experiencias web enfocadas para negocios y personas.",
     "web.editorialTitle": "Portafolio Editorial",
     "web.portfolio": "Portafolio independiente de modelo",
-    "reveal.status": "Construido más allá del mockup",
-    "reveal.title": "De la arquitectura<br><em>al movimiento.</em>",
-    "reveal.body": "La interfaz es solo la superficie. Debajo conviven rutas, permisos, señales en vivo y decisiones que se mueven juntas.",
     "contact.label": "Iniciemos una conversación",
     "contact.pre": "¿Tienes un sistema por construir, un producto por mejorar o un problema difícil que valga la pena resolver?",
     "contact.line1": "Hagamos que",
@@ -259,13 +275,36 @@ const html = document.documentElement;
 const langButton = document.querySelector(".lang-toggle");
 const langLabels = [...document.querySelectorAll("[data-lang]")];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const bandwidth = navigator.connection;
+const conserveData = Boolean(bandwidth?.saveData || /(^|-)2g$|^3g$/.test(bandwidth?.effectiveType || ""));
+function prepareVideo(video) {
+  const sources = [...video.querySelectorAll("source[data-src]")];
+  if (!sources.length) return;
+  sources.forEach((source) => {
+    source.src = source.dataset.src;
+    source.removeAttribute("data-src");
+  });
+  video.load();
+}
+// Keep distant videos entirely unfetched. On a slow connection, only an explicit play loads them.
+if (!conserveData && !reducedMotion) {
+  const nearbyVideos = new IntersectionObserver((entries) => {
+    entries.forEach(({isIntersecting, target}) => {
+      if (!isIntersecting) return;
+      target.preload = "metadata";
+      prepareVideo(target);
+      nearbyVideos.unobserve(target);
+    });
+  }, {rootMargin: "400px 0px"});
+  document.querySelectorAll("video[data-deferred]").forEach(video => nearbyVideos.observe(video));
+}
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const cursorOrb = document.querySelector(".cursor-orb");
 const loader = document.querySelector(".site-loader");
 const loaderCount = document.querySelector(".loader-count");
 
 if (loader) {
-  const loaderDuration = reducedMotion ? 120 : 1250;
+  const loaderDuration = reducedMotion ? 120 : 650;
   const loaderStartedAt = Date.now();
   let loaderReleased = false;
 
@@ -332,9 +371,24 @@ const roProgressCount = document.querySelector(".ro-progress-count");
 const roVideo = document.querySelector(".ro-game-video");
 const roSoundToggle = document.querySelector(".ro-sound-toggle");
 const roSoundLabel = roSoundToggle?.querySelector("strong");
-const buildReveal = document.querySelector(".build-reveal");
-const revealPercent = document.querySelector(".reveal-percent");
 let framePending = false;
+let motionPending = false;
+let previousFrameTime = 0;
+let motionStep = 1;
+const motionState = new Map();
+function easeScrollProgress(key, target) {
+  if (reducedMotion || !motionState.has(key)) {
+    motionState.set(key, target);
+    return target;
+  }
+  const current = motionState.get(key);
+  const next = current + (target - current) * motionStep;
+  const settled = Math.abs(target - next) < .0001;
+  motionPending ||= !settled;
+  const value = settled ? target : next;
+  motionState.set(key, value);
+  return value;
+}
 
 function syncRoSoundLabel() {
   if (!roVideo || !roSoundLabel) return;
@@ -347,6 +401,7 @@ if (roVideo && roSoundToggle) {
   langButton.addEventListener("click", syncRoSoundLabel);
 
   roSoundToggle.addEventListener("click", async () => {
+    prepareVideo(roVideo);
     const enableSound = roVideo.muted;
     roVideo.muted = !enableSound;
     roVideo.volume = .9;
@@ -367,13 +422,21 @@ if (roVideo && roSoundToggle) {
   });
 
   const roVideoObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) roVideo.play().catch(() => {});
-    else roVideo.pause();
+    if (entry.isIntersecting && !conserveData && !reducedMotion) {
+      prepareVideo(roVideo);
+      roVideo.play().catch(() => {});
+    }
+    else if (!entry.isIntersecting) roVideo.pause();
   }, { threshold: .12 });
   roVideoObserver.observe(roGame);
 }
 
 function updateScrollEffects() {
+  const now = performance.now();
+  const delta = Math.min(50, previousFrameTime ? now - previousFrameTime : 16);
+  previousFrameTime = now;
+  motionStep = 1 - Math.exp(-delta / 55);
+  motionPending = false;
   const scrollTop = window.scrollY;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.transform = `scaleX(${maxScroll > 0 ? scrollTop / maxScroll : 0})`;
@@ -381,8 +444,8 @@ function updateScrollEffects() {
 
   if (horizontal) {
     const rect = horizontal.getBoundingClientRect();
-    const distance = horizontal.offsetHeight - window.innerHeight;
-    const value = Math.max(0, Math.min(1, -rect.top / distance));
+    const distance = Math.max(1, horizontal.offsetHeight - window.innerHeight);
+    const value = easeScrollProgress("work", Math.max(0, Math.min(1, -rect.top / distance)));
     const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
     track.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
     horizontalMeter.style.transform = `scaleX(${value})`;
@@ -392,7 +455,7 @@ function updateScrollEffects() {
     const rect = roGame.getBoundingClientRect();
     const distance = Math.max(1, roGame.offsetHeight - window.innerHeight);
     const raw = Math.max(0, Math.min(1, -rect.top / distance));
-    const value = reducedMotion ? 1 : raw * raw * (3 - 2 * raw);
+    const value = easeScrollProgress("ro", reducedMotion ? 1 : raw * raw * (3 - 2 * raw));
     const maxTranslate = Math.max(0, roTrack.scrollWidth - roViewport.clientWidth);
     roTrack.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
     roGame.style.setProperty("--ro-overlay-x", `${-value * 14}vw`);
@@ -403,20 +466,8 @@ function updateScrollEffects() {
     roProgressCount.textContent = String(Math.min(5, Math.floor(value * 4.999) + 1)).padStart(2, "0");
   }
 
-  if (buildReveal) {
-    const rect = buildReveal.getBoundingClientRect();
-    const distance = Math.max(1, buildReveal.offsetHeight - window.innerHeight);
-    const raw = Math.max(0, Math.min(1, -rect.top / distance));
-    const value = reducedMotion ? 1 : raw * raw * (3 - 2 * raw);
-    buildReveal.style.setProperty("--reveal-x", `${42 * (1 - value)}%`);
-    buildReveal.style.setProperty("--reveal-y", `${38 * (1 - value)}%`);
-    buildReveal.style.setProperty("--reveal-scale", String(1.14 - value * .14));
-    buildReveal.style.setProperty("--scaffold-opacity", String(Math.max(0, 1 - value * 1.35)));
-    buildReveal.style.setProperty("--copy-y", `${48 * (1 - value)}px`);
-    buildReveal.style.setProperty("--reveal-progress", String(value));
-    revealPercent.textContent = `${String(Math.round(value * 100)).padStart(2, "0")}%`;
-  }
-  framePending = false;
+  framePending = motionPending;
+  if (motionPending) requestAnimationFrame(updateScrollEffects);
 }
 
 window.addEventListener("scroll", () => {
@@ -425,7 +476,13 @@ window.addEventListener("scroll", () => {
     requestAnimationFrame(updateScrollEffects);
   }
 }, { passive: true });
-window.addEventListener("resize", updateScrollEffects);
+window.addEventListener("resize", () => {
+  motionState.clear();
+  if (!framePending) {
+    framePending = true;
+    requestAnimationFrame(updateScrollEffects);
+  }
+});
 updateScrollEffects();
 
 if (!reducedMotion) {
@@ -502,6 +559,7 @@ if (algoSection && algoVideo && algoSoundToggle) {
   langButton.addEventListener("click", syncAlgoSoundLabel);
 
   algoSoundToggle.addEventListener("click", async () => {
+    prepareVideo(algoVideo);
     const enableSound = algoVideo.muted;
     algoVideo.muted = !enableSound;
     algoVideo.volume = .9;
@@ -520,8 +578,11 @@ if (algoSection && algoVideo && algoSoundToggle) {
   });
 
   const algoVideoObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) algoVideo.play().catch(() => {});
-    else algoVideo.pause();
+    if (entry.isIntersecting && !conserveData && !reducedMotion) {
+      prepareVideo(algoVideo);
+      algoVideo.play().catch(() => {});
+    }
+    else if (!entry.isIntersecting) algoVideo.pause();
   }, { threshold: .12 });
   algoVideoObserver.observe(algoSection);
 }
