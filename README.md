@@ -1,6 +1,6 @@
 # Nicolás Sira — Portfolio
 
-Personal portfolio of **Nicolás Sira**, backend developer focused on C#/.NET, SQL Server and PostgreSQL, with full-stack experience building financial software and multi-tenant products.
+Personal portfolio of **Nicolás Sira**, backend developer focused on C#/.NET, SQL Server and PostgreSQL, with Angular and React experience alongside financial software and multi-tenant products.
 
 **Live:** https://nasd0408.github.io/nicolas-sira-portfolio/
 
@@ -9,17 +9,17 @@ A static, dependency-free single-page site — no framework, no build step. Just
 ## Highlights
 
 - **Bilingual** — English / Spanish toggle with `localStorage` persistence and browser-language detection.
-- **Original visual identity** — the original palette, typography, hero orbits and project layouts, with a supplementary gallery of the Viktoria Becker website.
+- **Original visual identity** — the original palette, typography, hero orbits and product layouts.
 - **Progressive images** — embedded low-resolution previews and responsive WebP images that fade in after decoding.
-- **Motion** — scroll-driven horizontal sequences including Vika, mouse dragging, keyboard/touch controls, a progressive architecture diagram, a drawn experience timeline and interactive skill lighting. Reduced-motion and short-screen fallbacks keep content accessible. Scrolling itself stays native.
-- **Deferred video** — distant videos are not fetched; data-saving and slow-connection hints disable automatic loading/playback until the user requests it.
+- **Motion** — the product scroll sequence, a progressive architecture diagram, a drawn experience timeline and interactive skill lighting. Reduced-motion and short-screen fallbacks keep content accessible. Scrolling itself stays native.
+- **Deferred video** — product imagery is responsive and deferred until needed.
 - **No build dependencies** — deploy the folder as-is. Typography uses Google Fonts with local font fallbacks.
 - **SEO-ready** — Open Graph + Twitter cards, `Person` JSON-LD structured data, `sitemap.xml` and `robots.txt`.
 - **Accessible** — skip link, semantic landmarks, `aria` states and keyboard focus styles.
 
 ## Tech stack
 
-`HTML` · `CSS` · `Vanilla JavaScript` — plus the stack showcased in the work itself: React, .NET, Angular, TypeScript, React Native and PostgreSQL / SQL Server.
+`HTML` · `CSS` · `Vanilla JavaScript` — plus the stack showcased in the work itself: C#/.NET, PostgreSQL, SQL Server, Angular and React.
 
 ## Project structure
 

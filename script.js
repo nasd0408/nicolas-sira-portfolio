@@ -1,41 +1,29 @@
 const translations = {
   en: {
-    "lab.label": "Creative engineering",
-    "lab.title": "Algorithms, interfaces<br><em>and playable worlds.</em>",
-    "vika.label": "Beyond the backend",
-    "vika.title": "A different<br><em>kind of engineering.</em>",
-    "vika.body": "Viktoria Becker — an editorial portfolio where photography, typography and motion share the stage. A side project to explore what an interface can feel like.",
-    "vika.cta": "Explore the website",
-    "vika.hint": "Scroll to explore · drag to take control",
-    "vika.cover": "The first impression",
-    "vika.sequence": "The editorial sequence",
-    "vika.motion": "Type in motion",
-    "vika.previous": "Previous preview",
-    "vika.next": "Next preview",
 
-    "nav.role": "Backend & full-stack developer",
+    "nav.role": "C#/.NET backend developer",
     "nav.work": "Work",
     "nav.experience": "Experience",
     "nav.about": "About",
     "nav.contact": "Let's talk",
     "hero.availability": "Open to remote work & relocation",
-    "hero.kicker": "Backend & full-stack / C# · .NET · SQL",
+    "hero.kicker": "C# · .NET · SQL / Backend development",
     "hero.line1": "I build software",
     "hero.line2": "that runs",
     "hero.line3": "the business.",
-    "hero.body": "I turn operational complexity into useful products. Backend development with C#/.NET and SQL, with full-stack experience to take an idea all the way to production.",
+    "hero.body": "I build C#/.NET APIs and SQL-backed systems for real operations. Angular and React help me deliver the interface when the product needs it.",
     "hero.cta": "Explore work",
     "manifesto.label": "How I work",
-    "manifesto.title": "Not just interfaces.<br><em>Operational leverage.</em>",
+    "manifesto.title": "Reliable foundations.<br><em>Operational impact.</em>",
     "manifesto.p1": "The most useful software disappears into the work: it keeps data clean, decisions fast and teams moving.",
-    "manifesto.p2": "I work across product, frontend, backend, infrastructure and data—the whole path from a business problem to a deployed system.",
+    "manifesto.p2": "I design the APIs, data models and integrations behind operational products, then use Angular or React when the interface needs to ship with them.",
     "work.label": "Selected systems",
     "work.drag": "Scroll to explore",
     "work.title": "Built end to end.<br><em>Running for real.</em>",
     "flota.type": "Multi-tenant fleet intelligence",
-    "flota.summary": "A fleet platform with .NET and PostgreSQL: tenant isolation, trips, maintenance, fuel and billing. Real-time alerts with SignalR and a React interface.",
+    "flota.summary": "A C#/.NET backend with PostgreSQL for tenant isolation, trips, maintenance, fuel and billing. SignalR delivers real-time alerts; React provides the interface.",
     "cuadre.type": "Business OS for beauty professionals",
-    "cuadre.summary": "A .NET backend for appointments, clients, debts, payroll and reporting. A React Native app with offline-first synchronization brings it to beauty professionals.",
+    "cuadre.summary": "A C#/.NET backend for appointments, clients, debts, payroll and reporting. Offline-first synchronization connects it to the React Native app.",
     "case.role": "Role",
     "case.solo": "Solo product engineer",
     "case.stack": "Core stack",
@@ -44,56 +32,25 @@ const translations = {
     "case.website": "Product website",
     "cuadre.downloads": "Play Store downloads",
     "cuadre.offline": "Works offline.<br>Syncs when connected.",
-    "game.label": "Game design & development",
-    "game.kicker": "A rhythm game built with Godot",
-    "game.body": "You are Norway's drum at the Rowing World Championship. Conduct the crowd or row the longship—everything is controlled by the swing.",
-    "game.modes": "Game modes",
-    "game.difficulties": "Difficulty levels",
-    "game.languages": "Tutorial languages",
-    "game.cta": "Play & download on itch.io",
-    "game.chapter": "Two modes. One pulse.",
-    "game.chapterTitle": "Conduct the stadium.<br><em>Row the longship.</em>",
-    "game.chapterBody": "No clicking and no long tutorials. Swing to command the crowd, then keep the boat moving in rhythm.",
-    "game.conduct": "DIRIGER! — Conduct the crowd",
-    "game.row": "RO! — Row to the beat",
-    "game.scroll": "Scroll to row",
-    "game.sound": "Play with sound",
-    "game.mute": "Mute sound",
-    "algo.label": "Algorithms & systems",
-    "algo.kicker": "Written entirely in Python. Running in the browser.",
-    "algo.title": "Algorithms you can hear.",
-    "algo.body": "Every comparison plays a note pitched by the value it touched: noise while the array is unsorted, a scale as it resolves. The second module does the same with route search over real OpenStreetMap cities.",
-    "algo.cta": "Open the visualizer",
-    "algo.sound": "Play with sound",
-    "algo.mute": "Mute sound",
-    "algo.sorters": "Sorting algorithms",
-    "algo.searchers": "Route algorithms",
-    "algo.maps": "Real city maps",
-    "algo.nojs": "Lines of JavaScript",
-    "algo.note1Title": "The engine is an event list, not an animation",
-    "algo.note1Body": "The algorithm runs to completion before the first frame is painted. Playback is a cursor moving over that list—so stepping backwards is O(1), and picture and sound stay in sync by construction.",
-    "algo.note2Title": "Sound is scheduled against the audio clock",
-    "algo.note2Body": "Notes are queued ahead on the AudioContext clock instead of on the animation frame: a few milliseconds of frame jitter are heard as arrhythmia. A pentatonic scale keeps twenty simultaneous notes consonant.",
-    "algo.note3Title": "The maps are baked, not downloaded",
-    "algo.note3Body": "A build step queries Overpass, prunes the degree-two nodes that carry no shape, and versions the result. Every edge weight is at least the straight line, which is what keeps the A* heuristic admissible.",
-    "architecture.label": "Under the interface",
-    "architecture.title": "I care about what users see.<br><em>And everything they don't.</em>",
-    "architecture.body": "Reliable software is a chain. Every layer needs to hold.",
-    "architecture.product": "Product",
-    "architecture.productText": "Flows shaped around real operations—not feature lists.",
-    "architecture.interface": "Interface",
-    "architecture.logic": "Systems",
-    "architecture.data": "Data & delivery",
+    "architecture.label": "Behind the product",
+    "architecture.title": "The backend holds.<br><em>Everything else follows.</em>",
+    "architecture.body": "From the API and data model to deployment, I build systems that keep working for the people who depend on them.",
+    "architecture.apis": "APIs & services",
+    "architecture.apisText": "C# · ASP.NET · REST APIs · SignalR",
+    "architecture.database": "SQL & data",
+    "architecture.databaseText": "PostgreSQL · SQL Server · tenant isolation",
+    "architecture.delivery": "Deployment",
+    "architecture.deliveryText": "IIS · on-premise installations · DigitalOcean",
+    "architecture.ui": "Supporting frontend",
+    "architecture.uiText": "Angular · React · TypeScript",
     "skills.label": "Toolbox",
     "skills.title": "Chosen for the job.<br><em>Proven in production.</em>",
-    "skills.body": "A working stack, not a trophy shelf—what I use to design, build, test and run real systems.",
-    "skills.languages": "Languages",
-    "skills.frontend": "Frontend & mobile",
+    "skills.body": "C#/.NET and SQL are my core tools. I use Angular and React to deliver the interfaces around those systems.",
+    "skills.frontend": "Frontend complementario",
     "skills.backend": "Backend",
-    "skills.data": "Data & BI",
-    "skills.cloud": "Cloud & delivery",
+    "skills.data": "SQL & data",
+    "skills.cloud": "Deployment",
     "skills.quality": "Quality",
-    "skills.note": "Also at home in Odoo & SAINT ERP operations · SUSCERTE 2023 — computer forensics & cybersecurity fundamentals",
     "experience.label": "Experience log",
     "experience.title": "From keeping a company online<br><em>to building its next system.</em>",
     "experience.subtitle": "Engineering shaped by ownership, not narrow job descriptions.",
@@ -135,42 +92,30 @@ const translations = {
     "contact.top": "Back to top"
   },
   es: {
-    "lab.label": "Ingeniería creativa",
-    "lab.title": "Algoritmos, interfaces<br><em>y mundos jugables.</em>",
-    "vika.label": "Más allá del backend",
-    "vika.title": "Otra forma<br><em>de construir.</em>",
-    "vika.body": "Viktoria Becker: un portafolio editorial donde fotografía, tipografía y movimiento comparten escenario. Un proyecto para explorar lo que una interfaz puede transmitir.",
-    "vika.cta": "Explorar la web",
-    "vika.hint": "Baja para explorar · arrastra para tomar el control",
-    "vika.cover": "La primera impresión",
-    "vika.sequence": "La secuencia editorial",
-    "vika.motion": "Tipografía en movimiento",
-    "vika.previous": "Vista anterior",
-    "vika.next": "Siguiente vista",
 
-    "nav.role": "Desarrollador backend y full-stack",
+    "nav.role": "Desarrollador backend C#/.NET",
     "nav.work": "Proyectos",
     "nav.experience": "Experiencia",
     "nav.about": "Perfil",
     "nav.contact": "Hablemos",
     "hero.availability": "Disponible para trabajo remoto y reubicación",
-    "hero.kicker": "Backend y full-stack / C# · .NET · SQL",
+    "hero.kicker": "C# · .NET · SQL / Desarrollo backend",
     "hero.line1": "Creo software",
     "hero.line2": "que mueve",
     "hero.line3": "el negocio.",
-    "hero.body": "Convierto complejidad operativa en productos útiles. Desarrollo backend con C#/.NET y SQL, con experiencia full-stack para llevar una idea hasta producción.",
+    "hero.body": "Construyo APIs con C#/.NET y sistemas basados en SQL para operaciones reales. Angular y React me permiten completar la interfaz cuando el producto lo necesita.",
     "hero.cta": "Ver proyectos",
     "manifesto.label": "Cómo trabajo",
-    "manifesto.title": "No solo interfaces.<br><em>Ventaja operativa.</em>",
+    "manifesto.title": "Bases sólidas.<br><em>Impacto real.</em>",
     "manifesto.p1": "El software más útil se integra al trabajo: mantiene los datos limpios, acelera decisiones y ayuda al equipo a avanzar.",
-    "manifesto.p2": "Trabajo en producto, frontend, backend, infraestructura y datos: todo el recorrido desde un problema de negocio hasta un sistema desplegado.",
+    "manifesto.p2": "Diseño las APIs, los modelos de datos y las integraciones de productos operativos; uso Angular o React cuando también hay que entregar la interfaz.",
     "work.label": "Sistemas seleccionados",
     "work.drag": "Desliza para explorar",
     "work.title": "Creados de punta a punta.<br><em>Funcionando de verdad.</em>",
     "flota.type": "Inteligencia de flotas multi-tenant",
-    "flota.summary": "Plataforma de flotas con .NET y PostgreSQL: aislamiento por cliente, viajes, mantenimiento, combustible y facturación. Alertas en tiempo real con SignalR e interfaz React.",
+    "flota.summary": "Backend C#/.NET y PostgreSQL para aislamiento por cliente, viajes, mantenimiento, combustible y facturación. SignalR envía alertas en tiempo real; React aporta la interfaz.",
     "cuadre.type": "Sistema operativo para profesionales de belleza",
-    "cuadre.summary": "Backend .NET para citas, clientes, deudas, nómina y reportes. Una aplicación React Native con sincronización offline-first lo acerca a los profesionales de belleza.",
+    "cuadre.summary": "Backend C#/.NET para citas, clientes, deudas, nómina y reportes. La sincronización sin conexión lo conecta con la aplicación React Native.",
     "case.role": "Rol",
     "case.solo": "Ingeniero de producto independiente",
     "case.stack": "Stack principal",
@@ -179,56 +124,25 @@ const translations = {
     "case.website": "Web del producto",
     "cuadre.downloads": "descargas en Play Store",
     "cuadre.offline": "Funciona sin internet.<br>Sincroniza al conectarse.",
-    "game.label": "Diseño y desarrollo de videojuegos",
-    "game.kicker": "Un juego rítmico creado con Godot",
-    "game.body": "Eres el tambor de Noruega en el Campeonato Mundial de Remo. Dirige al público o impulsa el drakkar: todo se controla con el movimiento.",
-    "game.modes": "Modos de juego",
-    "game.difficulties": "Niveles de dificultad",
-    "game.languages": "Idiomas del tutorial",
-    "game.cta": "Jugar y descargar en itch.io",
-    "game.chapter": "Dos modos. Un solo pulso.",
-    "game.chapterTitle": "Dirige el estadio.<br><em>Rema con el drakkar.</em>",
-    "game.chapterBody": "Sin clics y sin tutoriales eternos. Muévete para dirigir al público y mantén el bote avanzando al ritmo del tambor.",
-    "game.conduct": "DIRIGER! — Dirige al público",
-    "game.row": "RO! — Rema al ritmo",
-    "game.scroll": "Desliza para remar",
-    "game.sound": "Escuchar el RÖ",
-    "game.mute": "Silenciar",
-    "algo.label": "Algoritmos y sistemas",
-    "algo.kicker": "Escrito íntegramente en Python. Corriendo en el navegador.",
-    "algo.title": "Algoritmos que se escuchan.",
-    "algo.body": "Cada comparación emite una nota cuyo tono sale del valor que tocó: ruido mientras el array está desordenado, una escala a medida que se resuelve. El segundo módulo hace lo mismo con búsqueda de rutas sobre ciudades reales de OpenStreetMap.",
-    "algo.cta": "Abrir el visualizador",
-    "algo.sound": "Escuchar AlgoViz",
-    "algo.mute": "Silenciar",
-    "algo.sorters": "Algoritmos de ordenamiento",
-    "algo.searchers": "Algoritmos de rutas",
-    "algo.maps": "Mapas reales de ciudades",
-    "algo.nojs": "Líneas de JavaScript",
-    "algo.note1Title": "El motor es una lista de eventos, no una animación",
-    "algo.note1Body": "El algoritmo se ejecuta entero antes de pintar el primer fotograma. Reproducir es mover un cursor sobre esa lista: por eso retroceder es O(1), y la imagen y el sonido van sincronizados por construcción.",
-    "algo.note2Title": "El sonido se programa contra el reloj de audio",
-    "algo.note2Body": "Las notas se encolan con anticipación sobre el reloj del AudioContext y no en el fotograma: unos milisegundos de jitter se oyen como arritmia. La escala pentatónica mantiene consonantes veinte notas simultáneas.",
-    "algo.note3Title": "Los mapas se hornean, no se descargan",
-    "algo.note3Body": "Un paso de compilación consulta Overpass, poda los nodos de grado dos que no aportan forma y versiona el resultado. Cada arista pesa al menos lo que la línea recta, que es lo que mantiene admisible la heurística de A*.",
-    "architecture.label": "Detrás de la interfaz",
-    "architecture.title": "Me importa lo que el usuario ve.<br><em>Y todo lo que no ve.</em>",
-    "architecture.body": "El software confiable es una cadena. Cada capa debe responder.",
-    "architecture.product": "Producto",
-    "architecture.productText": "Flujos creados para operaciones reales, no para listas de funciones.",
-    "architecture.interface": "Interfaz",
-    "architecture.logic": "Sistemas",
-    "architecture.data": "Datos y despliegue",
+    "architecture.label": "Detrás del producto",
+    "architecture.title": "El backend sostiene.<br><em>Todo lo demás funciona.</em>",
+    "architecture.body": "De la API y el modelo de datos al despliegue, construyo sistemas que siguen funcionando para quienes dependen de ellos.",
+    "architecture.apis": "APIs y servicios",
+    "architecture.apisText": "C# · ASP.NET · API REST · SignalR",
+    "architecture.database": "SQL y datos",
+    "architecture.databaseText": "PostgreSQL · SQL Server · aislamiento por cliente",
+    "architecture.delivery": "Despliegue",
+    "architecture.deliveryText": "IIS · instalaciones on-premise · DigitalOcean",
+    "architecture.ui": "Frontend complementario",
+    "architecture.uiText": "Angular · React · TypeScript",
     "skills.label": "Caja de herramientas",
     "skills.title": "Elegidas para el trabajo.<br><em>Probadas en producción.</em>",
-    "skills.body": "Un stack de trabajo, no una vitrina: lo que uso para diseñar, construir, probar y operar sistemas reales.",
-    "skills.languages": "Lenguajes",
-    "skills.frontend": "Frontend y móvil",
+    "skills.body": "C#/.NET y SQL son mi base. Uso Angular y React para entregar las interfaces de esos sistemas.",
+    "skills.frontend": "Frontend complementario",
     "skills.backend": "Backend",
-    "skills.data": "Datos y BI",
-    "skills.cloud": "Cloud y despliegue",
+    "skills.data": "SQL y datos",
+    "skills.cloud": "Despliegue",
     "skills.quality": "Calidad",
-    "skills.note": "También opero Odoo y SAINT ERP · SUSCERTE 2023 — fundamentos de informática forense y ciberseguridad",
     "experience.label": "Registro de experiencia",
     "experience.title": "De mantener una empresa operativa<br><em>a construir su próximo sistema.</em>",
     "experience.subtitle": "Ingeniería moldeada por responsabilidad, no por descripciones de cargo estrechas.",
@@ -363,14 +277,6 @@ const progress = document.querySelector(".scroll-progress span");
 const horizontal = document.querySelector(".horizontal-sticky");
 const track = document.querySelector(".horizontal-track");
 const horizontalMeter = document.querySelector(".horizontal-meter span");
-const roGame = document.querySelector(".ro-game");
-const roViewport = document.querySelector(".ro-viewport");
-const roTrack = document.querySelector(".ro-track");
-const roMeter = document.querySelector(".ro-scroll-readout b i");
-const roProgressCount = document.querySelector(".ro-progress-count");
-const roVideo = document.querySelector(".ro-game-video");
-const roSoundToggle = document.querySelector(".ro-sound-toggle");
-const roSoundLabel = roSoundToggle?.querySelector("strong");
 let framePending = false;
 let motionPending = false;
 let previousFrameTime = 0;
@@ -388,47 +294,6 @@ function easeScrollProgress(key, target) {
   const value = settled ? target : next;
   motionState.set(key, value);
   return value;
-}
-
-function syncRoSoundLabel() {
-  if (!roVideo || !roSoundLabel) return;
-  const key = roVideo.muted ? "game.sound" : "game.mute";
-  roSoundLabel.textContent = (translations[html.lang] || translations.en)[key];
-}
-
-if (roVideo && roSoundToggle) {
-  syncRoSoundLabel();
-  langButton.addEventListener("click", syncRoSoundLabel);
-
-  roSoundToggle.addEventListener("click", async () => {
-    prepareVideo(roVideo);
-    const enableSound = roVideo.muted;
-    roVideo.muted = !enableSound;
-    roVideo.volume = .9;
-    roSoundToggle.classList.toggle("has-sound", enableSound);
-    roSoundToggle.setAttribute("aria-pressed", String(enableSound));
-    syncRoSoundLabel();
-
-    if (roVideo.paused) {
-      try {
-        await roVideo.play();
-      } catch {
-        roVideo.muted = true;
-        roSoundToggle.classList.remove("has-sound");
-        roSoundToggle.setAttribute("aria-pressed", "false");
-        syncRoSoundLabel();
-      }
-    }
-  });
-
-  const roVideoObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting && !conserveData && !reducedMotion) {
-      prepareVideo(roVideo);
-      roVideo.play().catch(() => {});
-    }
-    else if (!entry.isIntersecting) roVideo.pause();
-  }, { threshold: .12 });
-  roVideoObserver.observe(roGame);
 }
 
 function updateScrollEffects() {
@@ -449,21 +314,6 @@ function updateScrollEffects() {
     const maxTranslate = Math.max(0, track.scrollWidth - window.innerWidth);
     track.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
     horizontalMeter.style.transform = `scaleX(${value})`;
-  }
-
-  if (roGame) {
-    const rect = roGame.getBoundingClientRect();
-    const distance = Math.max(1, roGame.offsetHeight - window.innerHeight);
-    const raw = Math.max(0, Math.min(1, -rect.top / distance));
-    const value = easeScrollProgress("ro", reducedMotion ? 1 : raw * raw * (3 - 2 * raw));
-    const maxTranslate = Math.max(0, roTrack.scrollWidth - roViewport.clientWidth);
-    roTrack.style.transform = `translate3d(${-value * maxTranslate}px, 0, 0)`;
-    roGame.style.setProperty("--ro-overlay-x", `${-value * 14}vw`);
-    roGame.style.setProperty("--ro-overlay-y", `${(value - .5) * 72}px`);
-    roGame.style.setProperty("--ro-ring-rotation", `${value * 150}deg`);
-    roGame.style.setProperty("--ro-media-y", `${-18 + value * 24}px`);
-    roMeter.style.transform = `scaleX(${value})`;
-    roProgressCount.textContent = String(Math.min(5, Math.floor(value * 4.999) + 1)).padStart(2, "0");
   }
 
   framePending = motionPending;
@@ -540,51 +390,6 @@ if (finePointer && cursorOrb) {
     requestAnimationFrame(renderCursor);
   };
   renderCursor();
-}
-
-/* AlgoViz — the visualizer itself plays behind the copy. */
-const algoSection = document.querySelector(".algo");
-const algoVideo = document.querySelector(".algo-video");
-const algoSoundToggle = document.querySelector(".algo-sound");
-const algoSoundLabel = algoSoundToggle?.querySelector("strong");
-
-function syncAlgoSoundLabel() {
-  if (!algoVideo || !algoSoundLabel) return;
-  const key = algoVideo.muted ? "algo.sound" : "algo.mute";
-  algoSoundLabel.textContent = (translations[html.lang] || translations.en)[key];
-}
-
-if (algoSection && algoVideo && algoSoundToggle) {
-  syncAlgoSoundLabel();
-  langButton.addEventListener("click", syncAlgoSoundLabel);
-
-  algoSoundToggle.addEventListener("click", async () => {
-    prepareVideo(algoVideo);
-    const enableSound = algoVideo.muted;
-    algoVideo.muted = !enableSound;
-    algoVideo.volume = .9;
-    algoSoundToggle.setAttribute("aria-pressed", String(enableSound));
-    syncAlgoSoundLabel();
-
-    if (algoVideo.paused) {
-      try {
-        await algoVideo.play();
-      } catch {
-        algoVideo.muted = true;
-        algoSoundToggle.setAttribute("aria-pressed", "false");
-        syncAlgoSoundLabel();
-      }
-    }
-  });
-
-  const algoVideoObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting && !conserveData && !reducedMotion) {
-      prepareVideo(algoVideo);
-      algoVideo.play().catch(() => {});
-    }
-    else if (!entry.isIntersecting) algoVideo.pause();
-  }, { threshold: .12 });
-  algoVideoObserver.observe(algoSection);
 }
 
 document.getElementById("year").textContent = new Date().getFullYear();

@@ -17,107 +17,6 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
   }
 });
 
-/* One position model for scroll choreography, buttons, native touch and mouse dragging. */
-(() => {
-  const gallery = document.querySelector('.vika-gallery');
-  const section = document.querySelector('.visual-lab');
-  const previous = document.querySelector('.gallery-prev');
-  const next = document.querySelector('.gallery-next');
-  const frames = [...gallery.querySelectorAll('.vika-preview')];
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const meter = document.querySelector('.vika-progress');
-  let pinned = false, max = 0, travel = 1, bias = 0, target = 0;
-  let dragging = false, startX = 0, startLeft = 0, pointerId;
-  let frame = 0, lastTime = 0, written = gallery.scrollLeft;
-  const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
-  const rawPosition = () => clamp(-section.getBoundingClientRect().top / travel, 0, 1) * max;
-  const schedule = () => { if (!frame) frame = requestAnimationFrame(render); };
-  function indicators() {
-    const progress = max ? gallery.scrollLeft / max : 0;
-    previous.disabled = gallery.scrollLeft < 2;
-    next.disabled = gallery.scrollLeft >= max - 2;
-    meter.style.setProperty('--gallery-progress', progress);
-    const positions = frames.map(item => Math.min(max, item.offsetLeft - frames[0].offsetLeft));
-    const nearest = positions.reduce((best, value, index) => Math.abs(value-gallery.scrollLeft) < Math.abs(positions[best]-gallery.scrollLeft) ? index : best, 0);
-    meter.querySelector('span').textContent = `0${nearest + 1} / 03`;
-    frames.forEach((item, index) => item.classList.toggle('is-current', index === nearest));
-  }
-  function render(time) {
-    frame = 0;
-    const delta = Math.min(50, lastTime ? time-lastTime : 16);
-    lastTime = time;
-    if (!dragging && pinned) {
-      const distance = target-gallery.scrollLeft;
-      written = Math.abs(distance) < 1 ? target : gallery.scrollLeft + distance * (1-Math.exp(-delta/75));
-      gallery.scrollLeft = written;
-      written = gallery.scrollLeft;
-      if (Math.abs(target-written) >= 1) schedule();
-    }
-    indicators();
-  }
-  function measure() {
-    section.classList.remove('is-pinned');
-    pinned = !motion.matches && innerHeight >= 640;
-    section.classList.toggle('is-pinned', pinned);
-    max = Math.max(0, gallery.scrollWidth-gallery.clientWidth);
-    travel = Math.max(max, innerHeight * 1.25);
-    section.style.height = pinned ? `${innerHeight+travel}px` : '';
-    bias = 0;
-    target = pinned ? rawPosition() : gallery.scrollLeft;
-    schedule();
-  }
-  function seek(left) {
-    target = clamp(left, 0, max);
-    if (pinned) { bias = target-rawPosition(); schedule(); }
-    else gallery.scrollTo({left:target, behavior:motion.matches?'instant':'smooth'});
-  }
-  function step(direction) {
-    const positions = frames.map(item=>Math.min(max, item.offsetLeft-frames[0].offsetLeft));
-    seek(direction > 0 ? positions.find(value=>value>gallery.scrollLeft+5) ?? max : positions.findLast(value=>value<gallery.scrollLeft-5) ?? 0);
-  }
-  previous.addEventListener('click',()=>step(-1));
-  next.addEventListener('click',()=>step(1));
-  gallery.addEventListener('keydown',event=>{
-    if(event.target!==gallery || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
-    event.preventDefault();
-    if(event.key==='Home'||event.key==='End') seek(event.key==='Home'?0:max);
-    else step(event.key==='ArrowRight'?1:-1);
-  });
-  gallery.addEventListener('pointerdown',event=>{
-    if(event.pointerType!=='mouse'||event.button!==0) return;
-    dragging=true; pointerId=event.pointerId; startX=event.clientX; startLeft=gallery.scrollLeft;
-    gallery.setPointerCapture(pointerId); gallery.classList.add('is-dragging');
-    event.preventDefault(); gallery.focus({preventScroll:true});
-  });
-  gallery.addEventListener('pointermove',event=>{
-    if(!dragging||event.pointerId!==pointerId) return;
-    target=clamp(startLeft+startX-event.clientX,0,max);
-    gallery.scrollLeft=target; written=gallery.scrollLeft;
-    bias=target-rawPosition(); indicators();
-  });
-  function release() { dragging=false; gallery.classList.remove('is-dragging'); }
-  gallery.addEventListener('pointerup',release);
-  gallery.addEventListener('pointercancel',release);
-  gallery.addEventListener('lostpointercapture',release);
-  gallery.addEventListener('dragstart',event=>event.preventDefault());
-  gallery.addEventListener('scroll',()=>{
-    // Native horizontal swipes/trackpad updates become the new scroll origin.
-    if(!dragging && Math.abs(gallery.scrollLeft-written)>2) {
-      target=gallery.scrollLeft; bias=target-rawPosition(); written=target;
-    }
-    indicators();
-  },{passive:true});
-  window.addEventListener('scroll',()=>{
-    if(!pinned||dragging) return;
-    const rect=section.getBoundingClientRect();
-    if(rect.top>0 || rect.bottom<innerHeight) bias=0;
-    target=clamp(rawPosition()+bias,0,max); schedule();
-  },{passive:true});
-  window.addEventListener('resize',measure);
-  motion.addEventListener('change',measure);
-  measure();
-})();
-
 /* Architecture builds as it enters the viewport; experience draws its own timeline. */
 (() => {
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
@@ -179,7 +78,7 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
     scene.addEventListener('pointerleave', reset);
     preference.addEventListener('change', reset);
   });
-  document.querySelectorAll('.circle-link, .contact-pill, .visual-lab-link, .desktop-nav a').forEach(link => {
+  document.querySelectorAll('.circle-link, .contact-pill, .desktop-nav a').forEach(link => {
     // Move the contents, not the hit target, so the link never escapes the pointer.
     const contents = [...link.children];
     const reset = () => contents.forEach(child => child.style.translate = '0px 0px');
