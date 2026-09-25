@@ -23,7 +23,6 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
   const nodes=[...document.querySelectorAll('.system-node')];
   const timeline=document.querySelector('.timeline');
   const map=document.querySelector('.system-map');
-  const rows=[...document.querySelectorAll('.impact-row')];
   let frame=0;
   const clamp=value=>Math.min(1,Math.max(0,value));
   function update() {
@@ -34,10 +33,6 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
     nodes.forEach((node,index)=>node.classList.toggle('is-powered',progress>(index+.25)/nodes.length));
     const position=timeline.getBoundingClientRect();
     timeline.style.setProperty('--timeline-progress',motion.matches?1:clamp((innerHeight*.7-position.top)/position.height));
-    rows.forEach(row=>{
-      const bounds=row.getBoundingClientRect();
-      row.style.setProperty('--signal-growth',motion.matches?1:clamp((innerHeight*.95-bounds.top)/(bounds.height*.8)));
-    });
   }
   const schedule=()=>{if(!frame)frame=requestAnimationFrame(update);};
   addEventListener('scroll',schedule,{passive:true});
@@ -98,43 +93,6 @@ document.querySelectorAll('.progressive-media').forEach((picture) => {
     entries.forEach(entry => entry.target.classList.toggle('motion-in-view', entry.isIntersecting));
   }, {threshold: .2});
   scenes.forEach(scene => observer.observe(scene));
-})();
-
-/* Impact numbers count up once their row is on screen; language toggles snap instead of re-animating. */
-(() => {
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  function animate(el) {
-    const target = parseInt(el.dataset.countTo, 10) || 0;
-    const duration = 1100;
-    const start = performance.now();
-    function frame(time) {
-      const progress = Math.min(1, (time - start) / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
-      if (progress < 1) requestAnimationFrame(frame);
-      else el.textContent = target;
-    }
-    requestAnimationFrame(frame);
-  }
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      animate(entry.target);
-      io.unobserve(entry.target);
-    });
-  }, { threshold: .6 });
-  function bind() {
-    document.querySelectorAll('.count-up').forEach(el => {
-      const row = el.closest('.impact-row');
-      if (motion.matches || (row && row.classList.contains('is-visible'))) {
-        el.textContent = el.dataset.countTo;
-      } else {
-        io.observe(el);
-      }
-    });
-  }
-  bind();
-  document.querySelector('.lang-toggle')?.addEventListener('click', bind);
 })();
 
 /* Hero tech tags decode into place once the loader clears, echoing the HUD styling of the orbit. */
