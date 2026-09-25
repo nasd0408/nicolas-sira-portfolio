@@ -385,7 +385,7 @@ body:has([role="button"]:hover) .cursor-orb span { font-size: 8px; opacity: 1; }
   margin-left: auto;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 34px;
 }
 .hero-bottom > p {
@@ -426,7 +426,7 @@ body:has([role="button"]:hover) .cursor-orb span { font-size: 8px; opacity: 1; }
 .hero-orbit {
   position: absolute;
   z-index: 2;
-  width: min(44vw, 640px);
+  width: min(44vw, 640px, 58vh);
   aspect-ratio: 1;
   right: -4vw;
   top: 14vh;
@@ -1664,7 +1664,7 @@ footer a:hover { color: var(--acid); }
   .hero { min-height: 100svh; padding-bottom: 82px; }
   .hero-grid { background-size: 44px 44px; }
   .hero::before { width: 100vw; height: 100vw; right: -55vw; top: 2vh; }
-  .hero-orbit { width: 88vw; right: -44vw; top: 14vh; opacity: .36; }
+  .hero-orbit { width: min(88vw, 60vh); right: -44vw; top: 14vh; opacity: .36; }
   .availability { margin-bottom: 32px; font-size: 7px; }
   .availability-location { display: none; }
   .hero h1 { font-size: clamp(54px, 18.5vw, 88px); line-height: .82; }
